@@ -1784,3 +1784,31 @@ footer span {
   font-weight: 500;
   line-height: 23px; /* 150% */
 }
+
+
+.slider-container {
+  max-width: 800px;
+  margin: auto;
+  color: white;
+}
+
+.slide {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+  text-align: left;
+}
+
+.slide-content span {
+  font-size: 14px;
+  color: #ccc;
+}
+
+.slide-content h3 {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.slick-prev, .slick-next {
+  z-index: 10;
+}

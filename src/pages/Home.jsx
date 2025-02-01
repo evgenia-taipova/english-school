@@ -5,10 +5,44 @@ import TelegramIcon from "../assets/links/telegram.svg";
 import WhatsappIcon from "../assets/links/whatsapp.svg";
 
 import Slider from "react-slick";
-import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 export function Home() {
+  const courses = [
+    {
+      id: 1,
+      title: "English for IT",
+      description:
+        "Перетворіть англійську на інструмент для досягнення кар'єрних цілей завдяки онлайн-курсу для IT-спеціалістів.",
+    },
+    {
+      id: 2,
+      title: "English for Business",
+      description:
+        "Опануйте ділову англійську, щоб впевнено спілкуватися з партнерами, вести переговори та досягати нових вершин у бізнесі.",
+    },
+    {
+      id: 3,
+      title: "English for Business",
+      description:
+        "Опануйте ділову англійську, щоб впевнено спілкуватися з партнерами, вести переговори та досягати нових вершин у бізнесі.",
+    },
+    {
+      id: 4,
+      title: "English for Business",
+      description:
+        "Опануйте ділову англійську, щоб впевнено спілкуватися з партнерами, вести переговори та досягати нових вершин у бізнесі.",
+    },
+  ];
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    arrows: true,
+  };
   return (
     <>
       <section className="home-top">
@@ -23,6 +57,17 @@ export function Home() {
         </div>
         <div className="slider-container">
           <h2>Спеціалізована англійська</h2>
+          <Slider {...settings}>
+            {courses.map((course) => (
+              <div key={course.id} className="slide">
+                <div className="slide-content">
+                  <span>{`0${course.id}`}</span>
+                  <h3>{course.title}</h3>
+                  <p>{course.description}</p>
+                </div>
+              </div>
+            ))}
+          </Slider>
         </div>
       </section>
       <section className="advantages">
