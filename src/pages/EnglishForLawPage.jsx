@@ -20,7 +20,7 @@ import {
   topics,
 } from "../data/courses/english-for-law";
 import TopBg from "../components/TopBg";
-
+import backgroundUrl from "../assets/pages-bg/english-for-law.png"
 function EnglishForLawPage() {
   return (
     <main className="page">
@@ -35,7 +35,7 @@ function EnglishForLawPage() {
           <button className="button primary">Записатись на курс</button>
         </div>
 
-        <TopBg backgroundUrl="/src/assets/pages-bg/english-for-law.png" />
+        <TopBg backgroundUrl={backgroundUrl} />
       </section>
 
       <section className="course-description">

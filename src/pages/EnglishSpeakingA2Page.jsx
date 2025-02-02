@@ -20,6 +20,7 @@ import {
   topics,
 } from "../data/courses/english-speaking-a2";
 import TopBg from "../components/TopBg";
+import backgroundUrl from "../assets/pages-bg/english-speaking-a2.png";
 
 function EnglishSpeakingA2Page() {
   return (
@@ -34,16 +35,13 @@ function EnglishSpeakingA2Page() {
           <CourseDetails details={details} />
           <button className="button primary">Записатись на курс</button>
         </div>
-
-        <TopBg backgroundUrl="/src/assets/pages-bg/english-speaking-a2.png"/>
-
+        <TopBg backgroundUrl={backgroundUrl} />
       </section>
 
       <section className="course-description">
         <ForWhom targetGroups={targetGroups} />
         <CourseDescription description={courseDescription} />
         <div className="course-results__gradient"></div>
-     
       </section>
 
       <section className="course-themes">
@@ -61,7 +59,6 @@ function EnglishSpeakingA2Page() {
         />
         <CourseForm />
         <div className="course-results__gradient"></div>
-
       </section>
     </main>
   );

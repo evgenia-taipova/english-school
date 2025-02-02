@@ -20,6 +20,7 @@ import {
   topics,
 } from "../data/courses/english-speaking-it";
 import TopBg from "../components/TopBg";
+import backgroundUrl from "../assets/pages-bg/english-speaking-it.png";
 
 function EnglishSpeakingITPage() {
   return (
@@ -34,16 +35,13 @@ function EnglishSpeakingITPage() {
           <CourseDetails details={details} />
           <button className="button primary">Записатись на курс</button>
         </div>
-
-        <TopBg backgroundUrl="/src/assets/pages-bg/english-speaking-it.png"/>
-
+        <TopBg backgroundUrl={backgroundUrl} />
       </section>
 
       <section className="course-description">
         <ForWhom targetGroups={targetGroups} />
         <CourseDescription description={courseDescription} />
         <div className="course-results__gradient"></div>
-      
       </section>
 
       <section className="course-themes">
@@ -61,7 +59,6 @@ function EnglishSpeakingITPage() {
         />
         <CourseForm />
         <div className="course-results__gradient"></div>
-
       </section>
     </main>
   );

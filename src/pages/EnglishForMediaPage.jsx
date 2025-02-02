@@ -20,6 +20,7 @@ import {
   topics,
 } from "../data/courses/english-for-media";
 import TopBg from "../components/TopBg";
+import backgroundUrl from "../assets/pages-bg/english-for-media.png"
 
 function EnglishForMediaPage() {
   return (
@@ -34,8 +35,7 @@ function EnglishForMediaPage() {
           <CourseDetails details={details} />
           <button className="button primary">Записатись на курс</button>
         </div>
-
-        <TopBg backgroundUrl="/src/assets/pages-bg/english-for-media.png" />
+        <TopBg backgroundUrl={backgroundUrl} />
       </section>
 
       <section className="course-description">

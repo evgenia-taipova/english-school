@@ -20,6 +20,7 @@ import {
   topics,
 } from "../data/courses/english-speaking-b1";
 import TopBg from "../components/TopBg";
+import backgroundUrl from "../assets/pages-bg/english-speaking-b1.png";
 
 function EnglishSpeakingB1Page() {
   return (
@@ -34,8 +35,7 @@ function EnglishSpeakingB1Page() {
           <CourseDetails details={details} />
           <button className="button primary">Записатись на курс</button>
         </div>
-
-        <TopBg backgroundUrl="/src/assets/pages-bg/english-speaking-b1.png" />
+        <TopBg backgroundUrl={backgroundUrl} />
       </section>
 
       <section className="course-description">
