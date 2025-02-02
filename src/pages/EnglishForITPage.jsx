@@ -22,6 +22,7 @@ import {
   topics,
 } from "../data/courses/english-for-it";
 import TopBg from "../components/TopBg";
+import backgroundUrl from "../assets/pages-bg/english-for-it.png";
 
 function EnglishForITPage() {
   return (
@@ -38,10 +39,7 @@ function EnglishForITPage() {
         </div>
         <CourseBonus {...bonusData} />
 
-        <TopBg
-          backgroundUrl="/assets/pages-bg/english-for-it.png"
-          top="-108px"
-        />
+        <TopBg backgroundUrl={backgroundUrl} top="-108px" />
       </section>
 
       <section className="course-description">

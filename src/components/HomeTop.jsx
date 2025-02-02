@@ -1,5 +1,6 @@
 import CourseSlider from "../components/CourseSlider";
 import TopBg from "../components/TopBg";
+import backgroundUrl from "../assets/pages-bg/home.png";
 
 function HomeTop() {
   return (
@@ -18,7 +19,7 @@ function HomeTop() {
       <CourseSlider title="Граматика англійської мови" category="grammar" />
       <CourseSlider title="English Speaking Club" category="speaking" />
 
-      <TopBg backgroundUrl="/src/assets/pages-bg/home.png" top="-135px" />
+      <TopBg backgroundUrl={backgroundUrl} top="-135px" />
     </section>
   );
 }
