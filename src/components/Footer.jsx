@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import logo from "../assets/logo.svg";
 
 function Footer() {
@@ -25,7 +26,7 @@ function Footer() {
           </li>
         </nav>
         <div className="footer__main-links">
-          <a href="">Політика конфіденційності</a>
+          <Link to="/privacy-policy">Політика конфіденційності</Link>
           <a href="">Умови обслуговування</a>
         </div>
       </div>

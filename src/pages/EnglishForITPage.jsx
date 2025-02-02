@@ -39,7 +39,7 @@ function EnglishForITPage() {
         <CourseBonus {...bonusData} />
 
         <TopBg
-          backgroundUrl="/src/assets/pages-bg/english-for-it.png"
+          backgroundUrl="/assets/pages-bg/english-for-it.png"
           top="-108px"
         />
       </section>
