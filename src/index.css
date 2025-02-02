@@ -1325,6 +1325,15 @@ footer span {
   font-family: "Montserrat";
 }
 
+.form__input-select {
+  appearance: none;
+  cursor: pointer;
+  background-image: url(./assets/arrow-down.svg);
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 24px;
+}
+
 .form__input-phone {
   color: white !important;
   width: 100%;
@@ -1339,9 +1348,30 @@ footer span {
 }
 
 .form__input-dropdown {
-  background-color: #050015 !important;
+  background-color: #0f003f !important;
   color: white !important;
   /* font-family: "Montserrat" !important; */
+  width: 480px !important;
+  transform: translateX(-21px);
+  overflow-y: scroll !important; /* Позволяет прокручивать, но не отображает scrollbar */
+  scrollbar-width: none; /* Для Firefox */
+}
+
+.form__input-dropdown::-webkit-scrollbar {
+  display: none; /* Для Chrome, Safari и Edge */
+}
+
+.react-international-phone-country-selector-dropdown__list-item {
+  background-color: var(--Input-bg-active, #201447) !important;
+}
+
+.react-international-phone-country-selector-dropdown__list-item:hover {
+  background-color: var(--Input-bg-active, #0f003f) !important;
+}
+
+.react-international-phone-country-selector-dropdown__list-item--selected {
+  background-color: var(--Input-bg-active, #0f003f) !important;
+  color: white !important;
 }
 
 .phone-input-container {
@@ -1364,6 +1394,20 @@ footer span {
   border: var(--stroke-weight-1, 1px) solid
     var(--Input-stroke-hovered, rgba(217, 217, 217, 0.6));
   background: var(--Input-bg-hovered, #0f003f);
+}
+
+.form__input-select:hover {
+  background-image: url(./assets/arrow-down-hover.svg);
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 24px;
+}
+
+.form__input-select:active {
+  background-image: url(./assets/arrow-down-active.svg);
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 24px;
 }
 
 .form__input:focus,

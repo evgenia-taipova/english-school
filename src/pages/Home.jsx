@@ -184,7 +184,9 @@ export function Home() {
                   className: "form__input-country",
                   buttonClassName: "form__input-country",
                   buttonContentWrapperClassName: "form__input-country",
-                  dropdownStyleProps: { className: "form__input-dropdown" },
+                  dropdownStyleProps: {
+                    className: "form__input-dropdown",
+                  },
                 }}
               />
             </label>
@@ -195,6 +197,16 @@ export function Home() {
                 name="Email"
                 placeholder="myemail@gmail.com"
               />
+            </label>
+            <label>
+              Оберіть потрібний курс
+              <select className="form__input form__input-select" name="course">
+                {courses.map((course, index) => (
+                  <option key={course.id} value={course.id}>
+                    {`${String(index + 1).padStart(2, "0")} - ${course.title}`}
+                  </option>
+                ))}
+              </select>
             </label>
           </div>
 
