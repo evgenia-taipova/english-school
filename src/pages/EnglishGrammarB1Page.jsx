@@ -18,6 +18,7 @@ import {
   programDescription,
   topics,
 } from "../data/courses/english-grammar-b1";
+import TopBg from "../components/TopBg";
 
 function EnglishGrammarB1Page() {
   return (
@@ -33,12 +34,14 @@ function EnglishGrammarB1Page() {
           <button className="button primary">Записатись на курс</button>
         </div>
 
-        <TopBg />
+        <TopBg backgroundUrl="/src/assets/pages-bg/english-grammar-b1.png"/>
       </section>
 
       <section className="course-description">
         <ForWhom targetGroups={targetGroups} />
         <CourseDescription description={courseDescription} />
+     
+        <div className="course-results__gradient"></div>
       </section>
 
       <section className="course-themes">
@@ -51,6 +54,8 @@ function EnglishGrammarB1Page() {
       <section className="course-topic-form">
         <CourseProgram description={programDescription} topics={topics} />
         <CourseForm />
+        <div className="course-results__gradient"></div>
+
       </section>
     </main>
   );

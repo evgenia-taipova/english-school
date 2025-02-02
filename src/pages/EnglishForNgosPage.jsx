@@ -19,6 +19,7 @@ import {
   programDescription,
   topics,
 } from "../data/courses/english-for-ngos";
+import TopBg from "../components/TopBg";
 
 function EnglishForNgosPage() {
   return (
@@ -34,12 +35,15 @@ function EnglishForNgosPage() {
           <button className="button primary">Записатись на курс</button>
         </div>
 
-        <TopBg />
+        <TopBg backgroundUrl="/src/assets/pages-bg/english-for-ngos.png"/>
+
       </section>
 
       <section className="course-description">
         <ForWhom targetGroups={targetGroups} />
         <CourseDescription description={courseDescription} />
+        <div className="course-results__gradient"></div>
+     
       </section>
 
       <section className="course-themes">
@@ -56,6 +60,8 @@ function EnglishForNgosPage() {
           version="v2"
         />
         <CourseForm />
+        <div className="course-results__gradient"></div>
+
       </section>
     </main>
   );

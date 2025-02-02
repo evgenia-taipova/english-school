@@ -1,7 +1,10 @@
-function TopBg() {
+function TopBg({ backgroundUrl, top = "0px" }) {
   return (
     <>
-      <div className="bg__image"></div>
+      <div
+        className="bg__image"
+        style={{ backgroundImage: `url(${backgroundUrl})`, top: top }}
+      ></div>
       <div className="bg__footer"></div>
       <div className="bg__section"></div>
       <div className="bg__left">

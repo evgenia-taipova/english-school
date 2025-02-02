@@ -19,6 +19,7 @@ import {
   programDescription,
   topics,
 } from "../data/courses/english-for-law";
+import TopBg from "../components/TopBg";
 
 function EnglishForLawPage() {
   return (
@@ -34,12 +35,13 @@ function EnglishForLawPage() {
           <button className="button primary">Записатись на курс</button>
         </div>
 
-        <TopBg />
+        <TopBg backgroundUrl="/src/assets/pages-bg/english-for-law.png" />
       </section>
 
       <section className="course-description">
         <ForWhom targetGroups={targetGroups} />
         <CourseDescription description={courseDescription} />
+        <div className="course-results__gradient"></div>
       </section>
 
       <section className="course-themes">
@@ -56,6 +58,7 @@ function EnglishForLawPage() {
           version="v2"
         />
         <CourseForm />
+        <div className="course-results__gradient"></div>
       </section>
     </main>
   );

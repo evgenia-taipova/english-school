@@ -19,6 +19,7 @@ import {
   programDescription,
   topics,
 } from "../data/courses/english-for-business";
+import TopBg from "../components/TopBg";
 
 function EnglishForBusinessPage() {
   return (
@@ -34,12 +35,15 @@ function EnglishForBusinessPage() {
           <button className="button primary">Записатись на курс</button>
         </div>
 
-        <TopBg />
+        <TopBg backgroundUrl="/src/assets/pages-bg/english-for-business.png"/>
+
       </section>
 
       <section className="course-description">
         <ForWhom targetGroups={targetGroups} />
         <CourseDescription description={courseDescription} />
+        <div className="course-results__gradient"></div>
+      
       </section>
 
       <section className="course-themes">
@@ -56,6 +60,8 @@ function EnglishForBusinessPage() {
           version="v2"
         />
         <CourseForm />
+        <div className="course-results__gradient"></div>
+
       </section>
     </main>
   );

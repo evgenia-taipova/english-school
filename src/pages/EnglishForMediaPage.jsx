@@ -19,6 +19,7 @@ import {
   programDescription,
   topics,
 } from "../data/courses/english-for-media";
+import TopBg from "../components/TopBg";
 
 function EnglishForMediaPage() {
   return (
@@ -34,12 +35,13 @@ function EnglishForMediaPage() {
           <button className="button primary">Записатись на курс</button>
         </div>
 
-        <TopBg />
+        <TopBg backgroundUrl="/src/assets/pages-bg/english-for-media.png" />
       </section>
 
       <section className="course-description">
         <ForWhom targetGroups={targetGroups} />
         <CourseDescription description={courseDescription} />
+        <div className="course-results__gradient"></div>
       </section>
 
       <section className="course-themes">
@@ -56,6 +58,7 @@ function EnglishForMediaPage() {
           version="v2"
         />
         <CourseForm />
+        <div className="course-results__gradient"></div>
       </section>
     </main>
   );

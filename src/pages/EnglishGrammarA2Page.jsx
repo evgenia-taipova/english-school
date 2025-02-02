@@ -18,6 +18,7 @@ import {
   programDescription,
   topics,
 } from "../data/courses/english-grammar-a2";
+import TopBg from "../components/TopBg";
 
 function EnglishGrammarA2Page() {
   return (
@@ -32,12 +33,14 @@ function EnglishGrammarA2Page() {
           <CourseDetails details={details} />
           <button className="button primary">Записатись на курс</button>
         </div>
-        <TopBg />
+        <TopBg backgroundUrl="/src/assets/pages-bg/english-grammar-a2.png"/>
       </section>
 
       <section className="course-description">
         <ForWhom targetGroups={targetGroups} />
         <CourseDescription description={courseDescription} />
+        <div className="course-results__gradient"></div>
+      
       </section>
 
       <section className="course-themes">
@@ -50,6 +53,8 @@ function EnglishGrammarA2Page() {
       <section className="course-topic-form">
         <CourseProgram description={programDescription} topics={topics} />
         <CourseForm />
+        <div className="course-results__gradient"></div>
+
       </section>
     </main>
   );

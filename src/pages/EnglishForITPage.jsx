@@ -38,12 +38,16 @@ function EnglishForITPage() {
         </div>
         <CourseBonus {...bonusData} />
 
-        <TopBg />
+        <TopBg
+          backgroundUrl="/src/assets/pages-bg/english-for-it.png"
+          top="-108px"
+        />
       </section>
 
       <section className="course-description">
         <ForWhom targetGroups={targetGroups} />
         <CourseDescription description={courseDescription} />
+        <div className="course-results__gradient"></div>
       </section>
 
       <section className="course-themes">
@@ -56,6 +60,7 @@ function EnglishForITPage() {
       <section className="course-topic-form">
         <CourseProgram description={programDescription} topics={topics} />
         <CourseForm />
+        <div className="course-results__gradient"></div>
       </section>
     </main>
   );

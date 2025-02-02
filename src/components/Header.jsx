@@ -1,16 +1,14 @@
 import logo from "../assets/logo.svg";
 import menuBtn from "../assets/menu-btn.svg";
+import { Link } from "react-router-dom";
 
 function Header() {
   return (
     <header>
       <div className="header__main">
-        <a
-          className="header__logo"
-          href="https://novas-cool-site-aba215.webflow.io/"
-        >
+        <Link className="header__logo" to="/">
           <img className="header__logo-img" src={logo} alt="" />
-        </a>
+        </Link>
 
         <nav className="header__nav">
           <li className="header__nav-item">
@@ -26,11 +24,11 @@ function Header() {
             <a href="#contacts">Контакти</a>
           </li>
         </nav>
-
       </div>
       <button className="header__btn">Розпочати навчання</button>
-      <button className="header__menu"><img src={menuBtn} alt="" /></button>
-
+      <button className="header__menu">
+        <img src={menuBtn} alt="" />
+      </button>
     </header>
   );
 }
