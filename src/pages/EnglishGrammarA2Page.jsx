@@ -32,10 +32,7 @@ function EnglishGrammarA2Page() {
           <CourseDetails details={details} />
           <button className="button primary">Записатись на курс</button>
         </div>
-
-        <div className="bg__image"></div>
-        <div className="bg__footer"></div>
-        <div className="bg__section"></div>
+        <TopBg />
       </section>
 
       <section className="course-description">

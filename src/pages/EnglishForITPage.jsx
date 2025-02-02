@@ -21,6 +21,7 @@ import {
   programDescription,
   topics,
 } from "../data/courses/english-for-it";
+import TopBg from "../components/TopBg";
 
 function EnglishForITPage() {
   return (
@@ -37,15 +38,12 @@ function EnglishForITPage() {
         </div>
         <CourseBonus {...bonusData} />
 
-        <div className="bg__image"></div>
-        <div className="bg__footer"></div>
-        <div className="bg__section"></div>
+        <TopBg />
       </section>
 
       <section className="course-description">
         <ForWhom targetGroups={targetGroups} />
         <CourseDescription description={courseDescription} />
-        
       </section>
 
       <section className="course-themes">

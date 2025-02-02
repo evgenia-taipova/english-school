@@ -1,20 +1,25 @@
 import OkIcon from "../assets/okay.svg";
 import ImgAdv from "../assets/Home/Component-1/3.svg";
-import CourseForm from "../components/CourseForm";
 import TelegramIcon from "../assets/links/telegram.svg";
 import WhatsappIcon from "../assets/links/whatsapp.svg";
+
+import TopBg from "../components/TopBg";
+import { useState } from "react";
+import { PhoneInput } from "react-international-phone";
+import "react-international-phone/style.css";
 
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 export function Home() {
+  const [phone, setPhone] = useState("");
   const courses = [
     {
       id: 1,
       title: "English for IT",
       description:
-        "Перетворіть англійську на інструмент для досягнення кар'єрних цілей завдяки онлайн-курсу для IT-спеціалістів.",
+        "Перетворіть англійську на інструмент для досягнення кар’єрних цілей завдяки онлайн- курсу для IT-спеціалістів.",
     },
     {
       id: 2,
@@ -65,10 +70,13 @@ export function Home() {
                   <h3>{course.title}</h3>
                   <p>{course.description}</p>
                 </div>
+                {/* <button><img src={} alt="" /></button> */}
               </div>
             ))}
           </Slider>
         </div>
+
+        <TopBg />
       </section>
       <section className="advantages">
         <div className="advantages-inner">
@@ -165,15 +173,20 @@ export function Home() {
             </label>
             <label>
               Номер телефону
-              <div className="phone-input-container">
-                <div className="phone-flag"></div>
-                <span className="phone-code">+380</span>
-                <input
-                  type="text"
-                  className="phone-input"
-                  placeholder="(00)-000-0000"
-                />
-              </div>
+              <PhoneInput
+                defaultCountry="ua"
+                value={phone}
+                onChange={(phone) => setPhone(phone)}
+                className="form__input"
+                style={{ padding: "7px 20px" }}
+                inputClassName="form__input-phone"
+                countrySelectorStyleProps={{
+                  className: "form__input-country",
+                  buttonClassName: "form__input-country",
+                  buttonContentWrapperClassName: "form__input-country",
+                  dropdownStyleProps: { className: "form__input-dropdown" },
+                }}
+              />
             </label>
             <label>
               Емейл

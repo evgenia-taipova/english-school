@@ -34,9 +34,7 @@ function EnglishForLawPage() {
           <button className="button primary">Записатись на курс</button>
         </div>
 
-        <div className="bg__image"></div>
-        <div className="bg__footer"></div>
-        <div className="bg__section"></div>
+        <TopBg />
       </section>
 
       <section className="course-description">
@@ -52,7 +50,11 @@ function EnglishForLawPage() {
       <CourseResults results={results} />
 
       <section className="course-topic-form">
-        <CourseProgram description={programDescription} topics={topics} version="v2"/>
+        <CourseProgram
+          description={programDescription}
+          topics={topics}
+          version="v2"
+        />
         <CourseForm />
       </section>
     </main>
