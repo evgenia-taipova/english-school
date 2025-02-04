@@ -1,15 +1,15 @@
 import TelegramIcon from "../assets/links/telegram.svg";
 import WhatsappIcon from "../assets/links/whatsapp.svg";
 
-import { useState } from "react";
+import { useState, forwardRef } from "react";
 import { PhoneInput } from "react-international-phone";
 import "react-international-phone/style.css";
 
-const CourseForm = () => {
+const CourseForm = forwardRef((props, ref) => {
   const [phone, setPhone] = useState("");
 
   return (
-    <div className="course-form">
+    <div ref={ref} className="course-form">
       <div className="course-form__main">
         <div className="course-form__info">
           <h3 className="course-form__title">
@@ -73,6 +73,6 @@ const CourseForm = () => {
       </form>
     </div>
   );
-};
+});
 
 export default CourseForm;

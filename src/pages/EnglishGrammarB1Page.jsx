@@ -7,6 +7,8 @@ import CourseBenefits from "../components/CourseBenefits";
 import CourseResults from "../components/CourseResults";
 import CourseProgram from "../components/CourseProgram";
 import CourseForm from "../components/CourseForm";
+import { useScroll } from "../components/ScrollContext";
+
 import {
   headerInfo,
   details,
@@ -19,9 +21,11 @@ import {
   topics,
 } from "../data/courses/english-grammar-b1";
 import TopBg from "../components/TopBg";
-import backgroundUrl from "../assets/pages-bg/english-grammar-b1.png"
+import backgroundUrl from "../assets/pages-bg/english-grammar-b1.png";
 
 function EnglishGrammarB1Page() {
+  const { formRef } = useScroll();
+
   return (
     <main className="page">
       <section className="course__top">
@@ -32,16 +36,23 @@ function EnglishGrammarB1Page() {
             description={headerInfo.description}
           />
           <CourseDetails details={details} />
-          <button className="button primary">Записатись на курс</button>
+          <button
+            className="button primary"
+            onClick={() =>
+              formRef.current?.scrollIntoView({ behavior: "smooth" })
+            }
+          >
+            Записатись на курс
+          </button>
         </div>
 
-        <TopBg backgroundUrl={backgroundUrl}/>
+        <TopBg backgroundUrl={backgroundUrl} />
       </section>
 
       <section className="course-description">
         <ForWhom targetGroups={targetGroups} />
         <CourseDescription description={courseDescription} />
-     
+
         <div className="course-results__gradient"></div>
       </section>
 
@@ -54,9 +65,8 @@ function EnglishGrammarB1Page() {
 
       <section className="course-topic-form">
         <CourseProgram description={programDescription} topics={topics} />
-        <CourseForm />
+        <CourseForm ref={formRef} />
         <div className="course-results__gradient"></div>
-
       </section>
     </main>
   );

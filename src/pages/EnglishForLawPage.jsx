@@ -7,6 +7,7 @@ import CourseBenefits from "../components/CourseBenefits";
 import CourseResults from "../components/CourseResults";
 import CourseProgram from "../components/CourseProgram";
 import CourseForm from "../components/CourseForm";
+import { useScroll } from "../components/ScrollContext";
 
 import {
   headerInfo,
@@ -20,8 +21,10 @@ import {
   topics,
 } from "../data/courses/english-for-law";
 import TopBg from "../components/TopBg";
-import backgroundUrl from "../assets/pages-bg/english-for-law.png"
+import backgroundUrl from "../assets/pages-bg/english-for-law.png";
 function EnglishForLawPage() {
+  const { formRef } = useScroll();
+
   return (
     <main className="page">
       <section className="course__top">
@@ -32,7 +35,14 @@ function EnglishForLawPage() {
             description={headerInfo.description}
           />
           <CourseDetails details={details} />
-          <button className="button primary">Записатись на курс</button>
+          <button
+            className="button primary"
+            onClick={() =>
+              formRef.current?.scrollIntoView({ behavior: "smooth" })
+            }
+          >
+            Записатись на курс
+          </button>
         </div>
 
         <TopBg backgroundUrl={backgroundUrl} />
@@ -57,7 +67,7 @@ function EnglishForLawPage() {
           topics={topics}
           version="v2"
         />
-        <CourseForm />
+        <CourseForm ref={formRef} />
         <div className="course-results__gradient"></div>
       </section>
     </main>
