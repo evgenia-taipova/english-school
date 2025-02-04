@@ -26,7 +26,7 @@ function HomeTeacher() {
           <ul className="teacher-main__list">
             <li className="teacher-main__item">
               <img src={BookIcon} alt="" />
-              <div>
+              <div className="teacher-main__desc">
                 <h4>20+ років досвіду:</h4>
                 <ul className="teacher-main__item-list">
                   <li>
@@ -45,7 +45,7 @@ function HomeTeacher() {
             </li>
             <li className="teacher-main__item">
               <img src={MedalIcon} alt="" />
-              <div>
+              <div className="teacher-main__desc">
                 <h4>Міжнародна сертифікація:</h4>
                 <ul className="teacher-main__item-list">
                   <li>
@@ -58,7 +58,7 @@ function HomeTeacher() {
             </li>
             <li className="teacher-main__item">
               <img src={PenIcon} alt="" />
-              <div>
+              <div className="teacher-main__desc">
                 <h4>Авторка освітніх матеріалів:</h4>
                 <ul className="teacher-main__item-list">
                   <li>
@@ -71,7 +71,7 @@ function HomeTeacher() {
             </li>
             <li className="teacher-main__item">
               <img src={PlanetIcon} alt="" />
-              <div>
+              <div className="teacher-main__desc">
                 <h4>Міжнародний досвід:</h4>
                 <ul className="teacher-main__item-list">
                   <li>

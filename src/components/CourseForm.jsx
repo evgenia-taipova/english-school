@@ -67,7 +67,7 @@ const CourseForm = () => {
           </label>
         </div>
 
-        <button className="form__btn" type="submit">
+        <button className="form__btn button primary" type="submit">
           Надіслати
         </button>
       </form>

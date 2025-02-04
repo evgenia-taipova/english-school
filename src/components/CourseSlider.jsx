@@ -182,6 +182,7 @@ const CourseSlider = ({ title, category }) => {
             <button>
               <img src={ArrowIcon} alt="" />
             </button>
+            <div></div>
           </div>
         ))}
       </Slider>
