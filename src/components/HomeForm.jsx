@@ -1,22 +1,27 @@
 import TelegramIcon from "../assets/links/telegram.svg";
 import WhatsappIcon from "../assets/links/whatsapp.svg";
-import { useState } from "react";
+
+import { useState, forwardRef } from "react";
 import { PhoneInput } from "react-international-phone";
 import "react-international-phone/style.css";
 
-function HomeForm({ courses }) {
+const HomeForm = forwardRef(({ courses }, ref) => {
   const [phone, setPhone] = useState("");
   return (
-    <section className="form" style={{ padding: "112px 320px " }}>
+    <section ref={ref} className="form">
       <div className="course-form">
         <div className="course-form__main">
           <div className="course-form__info">
             <h3 className="course-form__title">
               Потрібна консультація щодо навчання?
             </h3>
-            <p className="course-form__description">
+            <p className="course-form__description course-form__description--desktop">
               Потрібна консультація щодо навчання, або вже обрав та хочеш
               записатися на курс? Заповнюй форму зворотнього зв'язку
+            </p>
+            <p className="course-form__description course-form__description--mobile">
+              Залишайте свої контакти і ми зв’яжемося з вами, щоби допомогти з
+              вибором курсу
             </p>
           </div>
           <div className="course-form__links">
@@ -33,7 +38,6 @@ function HomeForm({ courses }) {
         </div>
         <form action="" method="post">
           <div className="form__main">
-            <div></div>
             <label>
               Ім’я
               <input className="form__input" name="Name" placeholder="Iван" />
@@ -84,6 +88,6 @@ function HomeForm({ courses }) {
       </div>
     </section>
   );
-}
+});
 
 export default HomeForm;

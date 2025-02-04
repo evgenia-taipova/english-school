@@ -10,6 +10,7 @@ import englishForIt from "../assets/pages-bg/english-for-it.png";
 import englishForBusiness from "../assets/pages-bg/english-for-business.png";
 
 import { useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
 
 const NextArrow = ({ onClick }) => (
   <button className="custom-arrow next" onClick={onClick}>
@@ -24,16 +25,28 @@ const PrevArrow = ({ onClick }) => (
 );
 
 const settings = (slidesCount) => ({
-  className: "slider variable-width",
+  // className: "slider variable-width",
   dots: slidesCount > 2,
   infinite: slidesCount > 2,
   speed: 500,
-  slidesToShow: Math.min(slidesCount, 2),
+  slidesToShow: 2,
   slidesToScroll: 1,
   nextArrow: slidesCount > 2 ? <NextArrow /> : null,
   prevArrow: slidesCount > 2 ? <PrevArrow /> : null,
   customPaging: () => <div className="custom-dot" />,
   dotsClass: "slick-dots custom-dots",
+  responsive: [
+    {
+      breakpoint: 960,
+      settings: {
+        dots: true,
+        infinite: true,
+        slidesToShow: 1,
+        nextArrow: <NextArrow />,
+        prevArrow: <PrevArrow />,
+      },
+    },
+  ],
 });
 
 export const courses = [
@@ -152,6 +165,21 @@ export const courses = [
 ];
 
 const CourseSlider = ({ title, category }) => {
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const isLargeScreen = windowWidth >= 1250;
+
+  console.log("Current Width:", windowWidth, "isLargeScreen:", isLargeScreen);
+
   const navigate = useNavigate();
 
   const filteredCourses = courses.filter(
@@ -161,10 +189,11 @@ const CourseSlider = ({ title, category }) => {
   const handleCourseClick = (link) => {
     navigate(`/course/${link}`);
   };
+
   return (
     <div className="slider-container">
       <h2>{title}</h2>
-      <Slider {...settings(filteredCourses.length)}>
+      <Slider {...settings(filteredCourses.length)} key={windowWidth}>
         {filteredCourses.map((course) => (
           <div
             key={course.id}
@@ -173,7 +202,9 @@ const CourseSlider = ({ title, category }) => {
           >
             <div
               className="slide-content"
-              style={course.id === 7 ? { paddingRight: "60px" } : {}}
+              style={
+                course.id === 7 && isLargeScreen ? { paddingRight: "60px" } : {}
+              }
             >
               <span>{`0${course.id}`}</span>
               <h3>{course.title}</h3>
