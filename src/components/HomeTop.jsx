@@ -1,8 +1,11 @@
 import CourseSlider from "../components/CourseSlider";
 import TopBg from "../components/TopBg";
 import backgroundUrl from "../assets/pages-bg/home.png";
+import { useScroll } from "../components/ScrollContext";
 
 function HomeTop() {
+  const { formRef } = useScroll();
+
   return (
     <section className="home-top">
       <div className="home-header">
@@ -13,6 +16,14 @@ function HomeTop() {
           найшвидший спосіб. <br /> Обирайте практичний інтенсив і розпочинайте
           шлях до змін вже зараз.
         </p>
+        <button
+          className="header__btn--mobile"
+          onClick={() =>
+            formRef.current?.scrollIntoView({ behavior: "smooth" })
+          }
+        >
+          Розпочати навчання
+        </button>
       </div>
       <CourseSlider title="Спеціалізована англійська" category="specialized" />
 

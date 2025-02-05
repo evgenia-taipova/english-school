@@ -10,6 +10,12 @@ function HomeTeacher() {
   return (
     <section className="teacher">
       <div className="teacher-main">
+        <div className="teacher-header-mobile">
+          <h2>Викладач у Nova.School</h2>
+          <p className="teacher-header__description">
+            Оксана Харченко – <span>English Teacher</span>
+          </p>
+        </div>
         <div className="teacher-main__image">
           <div className="teacher-main__image-frame">
             <img src={PhotoUnder} alt="" />
@@ -27,7 +33,11 @@ function HomeTeacher() {
             <li className="teacher-main__item">
               <img src={BookIcon} alt="" />
               <div className="teacher-main__desc">
-                <h4>20+ років досвіду:</h4>
+                <div className="teacher-main__header">
+                  <img src={BookIcon} alt="" />
+                  <h4>20+ років досвіду:</h4>
+                </div>
+
                 <ul className="teacher-main__item-list">
                   <li>
                     • Національний університет «Києво-Могилянська академія»
@@ -44,9 +54,12 @@ function HomeTeacher() {
               </div>
             </li>
             <li className="teacher-main__item">
-              <img src={MedalIcon} alt="" />
               <div className="teacher-main__desc">
-                <h4>Міжнародна сертифікація:</h4>
+                <img src={MedalIcon} alt="" />
+                <div className="teacher-main__header">
+                  <img src={MedalIcon} alt="" />
+                  <h4>Міжнародна сертифікація:</h4>
+                </div>
                 <ul className="teacher-main__item-list">
                   <li>
                     • TKT (Teaching Knowledge Test) для викладачів англійської
@@ -59,7 +72,10 @@ function HomeTeacher() {
             <li className="teacher-main__item">
               <img src={PenIcon} alt="" />
               <div className="teacher-main__desc">
-                <h4>Авторка освітніх матеріалів:</h4>
+                <div className="teacher-main__header">
+                  <img src={PenIcon} alt="" />
+                  <h4>Авторка освітніх матеріалів:</h4>
+                </div>
                 <ul className="teacher-main__item-list">
                   <li>
                     • Розробниця практичних курсів та навчальних програм з
@@ -72,7 +88,11 @@ function HomeTeacher() {
             <li className="teacher-main__item">
               <img src={PlanetIcon} alt="" />
               <div className="teacher-main__desc">
-                <h4>Міжнародний досвід:</h4>
+                <div className="teacher-main__header">
+                  <img src={PlanetIcon} alt="" />
+
+                  <h4>Міжнародний досвід:</h4>
+                </div>
                 <ul className="teacher-main__item-list">
                   <li>
                     • Консультант та учасник міжнародного освітнього стартапу

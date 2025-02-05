@@ -85,6 +85,17 @@ const HomeForm = forwardRef(({ courses }, ref) => {
             Надіслати
           </button>
         </form>
+        <div className="form-desc__mobile">
+          <p>Або зв’яжіться з нами через мессенджери:</p>
+          <div className="course-links__icons">
+            <a href="">
+              <img src={TelegramIcon} alt="" />
+            </a>
+            <a href="">
+              <img src={WhatsappIcon} alt="" />
+            </a>
+          </div>
+        </div>
       </div>
     </section>
   );

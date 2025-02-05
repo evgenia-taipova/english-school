@@ -273,7 +273,8 @@ header {
   color: #b39aff;
 }
 
-.header__btn {
+.header__btn,
+.header__btn--mobile {
   display: flex;
   padding: 12px 24px;
   justify-content: center;
@@ -292,16 +293,21 @@ header {
   line-height: 26px; /* 162.5% */
 }
 
-.header__btn:hover {
+.header__btn:hover,
+.header__btn--mobile:hover {
   background: var(--Button-Primary-bg-hovered, #5d29fd);
   box-shadow: 0px 0px 18px 8px rgba(103, 72, 198, 0.25);
 }
 
-.header__btn:active {
+.header__btn:active,
+.header__btn--mobile:active {
   background: var(--Button-Primary-bg-active, #5d37d1);
   box-shadow: none;
 }
 
+.header__btn--mobile {
+  display: none;
+}
 .header__menu {
   display: none;
 }
@@ -1317,6 +1323,10 @@ footer span {
   gap: 24px;
 }
 
+.form-desc__mobile {
+  display: none;
+}
+
 .form {
   padding: 112px 320px;
 }
@@ -1536,6 +1546,7 @@ footer span {
   justify-content: space-between;
   align-items: center;
   align-self: stretch;
+  position: relative;
 }
 
 .advantages-main {
@@ -1842,7 +1853,7 @@ footer span {
   line-height: 24px; /* 150% */
 }
 
-.slide button {
+.slide-button {
   flex-shrink: 0;
   display: flex;
   width: 32px;
@@ -1850,7 +1861,14 @@ footer span {
   justify-content: center;
   align-items: center;
 }
-
+.slide-content__header button {
+  display: none;
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  justify-content: center;
+  align-items: center;
+}
 .slick-slider .slick-track {
   display: flex;
   gap: 32px;
@@ -1943,6 +1961,7 @@ footer span {
   background: var(--Body-bg-2, #0a002b);
   /* backdrop-filter: blur(6px); */
   gap: 40px;
+  overflow: hidden;
 }
 
 .teacher-main__text {
@@ -1953,15 +1972,20 @@ footer span {
   gap: 32px;
 }
 
-.teacher-header {
+.teacher-header,
+.teacher-header-mobile {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 12px;
   align-self: stretch;
 }
+.teacher-header-mobile {
+  display: none;
+}
 
-.teacher-header h2 {
+.teacher-header h2,
+.teacher-header-mobile h2 {
   align-self: stretch;
 
   font-size: 48px;
@@ -2014,6 +2038,10 @@ footer span {
   align-items: flex-start;
   gap: 8px;
   flex: 1 0 0;
+}
+
+.teacher-main__header img {
+  display: none;
 }
 .teacher-main__item h4 {
   align-self: stretch;
@@ -2300,6 +2328,15 @@ footer span {
     display: none;
   }
 
+  .header__btn--mobile {
+    display: block;
+    display: flex;
+    padding: 12px 24px;
+    justify-content: center;
+    align-items: center;
+    align-self: stretch;
+    margin-top: 16px;
+  }
   .overlay {
     position: fixed;
     top: 0;
@@ -2433,7 +2470,7 @@ footer span {
   .home-header h1,
   .teacher-header h2,
   .advantages-title {
-    font-size: 40px;
+    font-size: 38px;
   }
 
   .advantages {
@@ -2441,6 +2478,59 @@ footer span {
   }
   .advantages-main__text {
     gap: 32px;
+  }
+  .bg__image {
+    left: 0;
+    filter: blur(6px);
+    opacity: 0.2;
+  }
+  .bg__section {
+    background: linear-gradient(
+      180deg,
+      rgba(5, 0, 21, 0) 34.74%,
+      #050015 73.59%
+    );
+  }
+  .course-form {
+    display: flex;
+    padding: 48px 12px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+    align-self: stretch;
+  }
+  .course-form__main {
+    width: 100%;
+    text-align: center;
+  }
+  .course-form__info {
+    text-align: center;
+    align-items: center;
+  }
+
+  .course-form__links {
+    display: none;
+  }
+  .form-desc__mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    align-self: stretch;
+    text-align: center;
+  }
+
+  .course-form form {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  .course-form__title {
+    font-size: 36px;
+    line-height: normal;
+  }
+  .course-form__description--mobile {
+    width: 100%;
   }
 }
 
@@ -2509,5 +2599,236 @@ footer span {
   }
   .mobile-menu {
     padding: 10px 12px;
+  }
+
+  .advantages-main {
+    align-items: center;
+  }
+
+  .home-top {
+    padding: 120px 6px;
+  }
+
+  .home-header {
+    gap: 16px;
+    align-self: stretch;
+  }
+
+  .home-header h1 {
+    font-size: 36px;
+    line-height: normal;
+  }
+
+  /* .slider-container {
+    align-items: center;
+    gap: 16px;
+    align-self: stretch;
+  } */
+
+  .slider-container h2 {
+    text-align: center;
+    font-size: 24px;
+    line-height: 140%;
+  }
+
+  .slide {
+    padding: 24px 20px;
+    gap: 0px;
+    border-radius: 16px;
+    border: 2px solid rgba(69, 44, 145, 0.6);
+    /* backdrop-filter: blur(6px); */
+
+    background: linear-gradient(
+        270deg,
+        rgba(10, 0, 43, 0) 0%,
+        rgba(10, 0, 43, 0.5) 33.06%,
+        #0a002b 54.01%,
+        #0a002b 100%
+      ),
+      linear-gradient(
+        0deg,
+        rgba(110, 69, 233, 0.6) 0%,
+        rgba(110, 69, 233, 0.6) 100%
+      ),
+      url(./assets/pages-bg/english-for-it.png) 258.665px -5.447px / 77.264% 129.571%
+        no-repeat,
+      var(--Body-bg-1, rgba(10, 0, 43, 0.8)) !important;
+    /* background: inherit !important;  */
+  }
+  .slick-prev,
+  .slick-next {
+    display: none !important;
+  }
+
+  .slide-content {
+    padding-right: 0;
+    width: 100%;
+  }
+
+  .slide-content span {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%;
+  }
+
+  .slide-content h3 {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 140%;
+  }
+
+  .slide-content p {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 140%;
+  }
+
+  .slide-button {
+    display: none;
+  }
+  .slide-content__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+  }
+
+  .slide-content__header button {
+    display: flex;
+  }
+
+  .slick-slider .slick-track {
+    display: flex;
+    gap: 0px;
+  }
+
+  .custom-dots {
+    bottom: -30px !important;
+  }
+
+  .custom-dot {
+    width: 8px;
+    height: 8px;
+  }
+
+  .advantages {
+    padding: 120px 4px;
+    overflow: hidden;
+  }
+  .advantages-title {
+    text-align: center;
+
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+  .advantages-title span {
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+  .advantages-main__list {
+    gap: 32px;
+  }
+  .advantages-main__item-inner {
+    gap: 12px;
+  }
+  .advantages-main__item-inner h4 {
+    font-size: 20px;
+    line-height: 140%;
+  }
+  .advantages-img {
+    width: 200px;
+    left: 60%;
+    top: -200px;
+  }
+
+  .teacher {
+    padding: 120px 4px;
+  }
+  .teacher-main {
+    padding: 32px 12px;
+    gap: 32px;
+  }
+
+  .teacher-header {
+    display: none;
+  }
+  .teacher-header-mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    align-self: stretch;
+  }
+  .teacher-header-mobile h2 {
+    align-self: stretch;
+    text-align: center;
+
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+
+    background: var(
+      --Text-gradient,
+      linear-gradient(
+        180deg,
+        #fff 43%,
+        rgba(255, 255, 255, 0.6) 71%,
+        rgba(255, 255, 255, 0.32) 100%
+      )
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .teacher-header__description {
+    align-self: stretch;
+    text-align: center;
+
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 27px; /* 141.667% */
+  }
+
+  .teacher-header__description span {
+    font-weight: 400;
+  }
+
+  .teacher-main__item img {
+    display: none;
+  }
+  .teacher-main__header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    align-self: stretch;
+  }
+  .teacher-main__header img {
+    display: block;
+  }
+  .teacher-main__header h4 {
+    display: flex;
+    align-items: center;
+    font-size: var(--font-size-20, 20px);
+    font-style: normal;
+    font-weight: 700;
+    line-height: var(--line-height-28, 28px); /* 140% */
+  }
+  .form{
+    padding: 120px 4px;
+  }
+}
+
+@media (max-width: 425px) {
+  .teacher-main__image {
+    height: 100%;
+    border-radius: 14.613px;
   }
 }

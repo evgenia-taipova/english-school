@@ -46,6 +46,16 @@ const settings = (slidesCount) => ({
         prevArrow: <PrevArrow />,
       },
     },
+    {
+      breakpoint: 600,
+      settings: {
+        dots: true,
+        infinite: true,
+        slidesToShow: 1,
+        nextArrow: false,
+        prevArrow: false,
+      },
+    },
   ],
 });
 
@@ -166,10 +176,11 @@ export const courses = [
 
 const CourseSlider = ({ title, category }) => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 600);
   useEffect(() => {
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
+      setIsMobile(window.innerWidth <= 600);
     };
 
     window.addEventListener("resize", handleResize);
@@ -177,8 +188,6 @@ const CourseSlider = ({ title, category }) => {
   }, []);
 
   const isLargeScreen = windowWidth >= 1250;
-
-  console.log("Current Width:", windowWidth, "isLargeScreen:", isLargeScreen);
 
   const navigate = useNavigate();
 
@@ -193,8 +202,8 @@ const CourseSlider = ({ title, category }) => {
   return (
     <div className="slider-container">
       <h2>{title}</h2>
-      <Slider {...settings(filteredCourses.length)} key={windowWidth}>
-        {filteredCourses.map((course) => (
+      {isMobile && category === "grammar" ? (
+        filteredCourses.map((course) => (
           <div
             key={course.id}
             className="slide"
@@ -207,16 +216,54 @@ const CourseSlider = ({ title, category }) => {
               }
             >
               <span>{`0${course.id}`}</span>
-              <h3>{course.title}</h3>
+              <div className="slide-content__header">
+                <h3>{course.title}</h3>
+                <button>
+                  <img src={ArrowIcon} alt="" />
+                </button>
+              </div>
               <p>{course.description}</p>
             </div>
-            <button>
+            <button className="slide-button">
               <img src={ArrowIcon} alt="" />
             </button>
-            <div></div>
           </div>
-        ))}
-      </Slider>
+        ))
+      ) : (
+        <Slider
+          {...settings(filteredCourses.length)}
+          key={filteredCourses.length}
+        >
+          {filteredCourses.map((course) => (
+            <div
+              key={course.id}
+              className="slide"
+              onClick={() => handleCourseClick(course.link)}
+            >
+              <div
+                className="slide-content"
+                style={
+                  course.id === 7 && isLargeScreen
+                    ? { paddingRight: "60px" }
+                    : {}
+                }
+              >
+                <span>{`0${course.id}`}</span>
+                <div className="slide-content__header">
+                  <h3>{course.title}</h3>
+                  <button>
+                    <img src={ArrowIcon} alt="" />
+                  </button>
+                </div>
+                <p>{course.description}</p>
+              </div>
+              <button className="slide-button">
+                <img src={ArrowIcon} alt="" />
+              </button>
+            </div>
+          ))}
+        </Slider>
+      )}
     </div>
   );
 };
