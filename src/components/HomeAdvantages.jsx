@@ -1,8 +1,31 @@
 import OkIcon from "../assets/okay.svg";
 import ImgAdv from "../assets/Home/Component-1/3.svg";
+import { useEffect } from "react";
 
+function useScrollAnimation() {
+  useEffect(() => {
+    const items = document.querySelectorAll(".advantages-main__item");
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          }
+        });
+      },
+      { threshold: 0.3 }
+    );
+
+    items.forEach((item) => observer.observe(item));
+
+    return () => items.forEach((item) => observer.unobserve(item));
+  }, []);
+}
 
 function HomeAdvantages() {
+  useScrollAnimation();
+
   return (
     <section className="advantages">
       <div className="advantages-inner">

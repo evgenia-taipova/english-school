@@ -1,14 +1,39 @@
+import { useEffect, useState, useRef } from "react";
+import { motion } from "framer-motion";
 import PenIcon from "../assets/forwhom/pen.svg";
 import PlanetIcon from "../assets/forwhom/planet.svg";
 import MedalIcon from "../assets/forwhom/medal.svg";
 import BookIcon from "../assets/forwhom/book.svg";
-
 import Photo from "../assets/pic2.png";
 import PhotoUnder from "../assets/pic.png";
 
 function HomeTeacher() {
+  const [isVisible, setIsVisible] = useState(false);
+  const ref = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.3 } // Запускаем анимацию, когда 30% элемента в зоне видимости
+    );
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => {
+      if (ref.current) {
+        observer.unobserve(ref.current);
+      }
+    };
+  }, []);
+
   return (
-    <section className="teacher">
+    <section className="teacher" ref={ref}>
       <div className="teacher-main">
         <div className="teacher-header-mobile">
           <h2>Викладач у Nova.School</h2>
@@ -16,12 +41,29 @@ function HomeTeacher() {
             Оксана Харченко – <span>English Teacher</span>
           </p>
         </div>
-        <div className="teacher-main__image">
-          <div className="teacher-main__image-frame">
+        <motion.div
+          className="teacher-main__image"
+          initial={{ opacity: 0, scale: 0.9, y: 30 }}
+          animate={isVisible ? { opacity: 1, scale: 1, y: 0 } : {}}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+        >
+          <motion.div
+            className="teacher-main__image-frame"
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={isVisible ? { opacity: 1, scale: 1 } : {}}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
             <img src={PhotoUnder} alt="" />
-          </div>
-          <img src={Photo} alt="" className="teacher-main__image-main" />
-        </div>
+          </motion.div>
+          <motion.img
+            src={Photo}
+            alt=""
+            className="teacher-main__image-main"
+            initial={{ opacity: 0, scale: 0.9, y: 20 }}
+            animate={isVisible ? { opacity: 1, scale: 1, y: 0 } : {}}
+            transition={{ duration: 0.8, delay: 0.4 }}
+          />
+        </motion.div>
         <div className="teacher-main__text">
           <div className="teacher-header">
             <h2>Викладач у Nova.School</h2>
@@ -30,85 +72,66 @@ function HomeTeacher() {
             </p>
           </div>
           <ul className="teacher-main__list">
-            <li className="teacher-main__item">
-              <img src={BookIcon} alt="" />
-              <div className="teacher-main__desc">
-                <div className="teacher-main__header">
-                  <img src={BookIcon} alt="" />
-                  <h4>20+ років досвіду:</h4>
+            {[
+              {
+                icon: BookIcon,
+                title: "20+ років досвіду:",
+                items: [
+                  "Національний університет «Києво-Могилянська академія» (Київ, Україна);",
+                  "Université Paris-Est Créteil (Париж, Франція);",
+                  "Мовні курси для студентів різних рівнів;",
+                  "Організатор та викладач програм корпоративної англійської;",
+                  "Викладач ESP;",
+                  "Інструктор з підготовки до міжнародних іспитів;",
+                ],
+              },
+              {
+                icon: MedalIcon,
+                title: "Міжнародна сертифікація:",
+                items: [
+                  "TKT (Teaching Knowledge Test) для викладачів англійської мови;",
+                  "Сертифікати: Cambridge, Oxford, Pearson та MOOC.",
+                ],
+              },
+              {
+                icon: PenIcon,
+                title: "Авторка освітніх матеріалів:",
+                items: [
+                  "Розробниця практичних курсів та навчальних програм з англійської мови;",
+                  "Співавторка підручників для різних спеціалізацій.",
+                ],
+              },
+              {
+                icon: PlanetIcon,
+                title: "Міжнародний досвід:",
+                items: [
+                  "Консультант та учасник міжнародного освітнього стартапу (США);",
+                  "Організаторка освітннього проєкту у Литві;",
+                  "Учасниця освітніх тренінгів в Європі.",
+                ],
+              },
+            ].map((item, index) => (
+              <li key={index} className="teacher-main__item">
+                <img src={item.icon} alt="" />
+                <div className="teacher-main__desc">
+                  <div className="teacher-main__header">
+                    <img src={item.icon} alt="" />
+                    <h4>{item.title}</h4>
+                  </div>
+                  <ul className="teacher-main__item-list">
+                    {item.items.map((text, i) => (
+                      <li key={i}>• {text}</li>
+                    ))}
+                  </ul>
                 </div>
-
-                <ul className="teacher-main__item-list">
-                  <li>
-                    • Національний університет «Києво-Могилянська академія»
-                    (Київ, Україна);
-                  </li>
-                  <li>• Université Paris-Est Créteil (Париж, Франція);</li>
-                  <li>• Мовні курси для студентів різних рівнів;</li>
-                  <li>
-                    • Організатор та викладач програм корпоративної англійської;
-                  </li>
-                  <li>• Викладач ESP;</li>
-                  <li>• Інструктор з підготовки до міжнародних іспитів;</li>
-                </ul>
-              </div>
-            </li>
-            <li className="teacher-main__item">
-              <div className="teacher-main__desc">
-                <img src={MedalIcon} alt="" />
-                <div className="teacher-main__header">
-                  <img src={MedalIcon} alt="" />
-                  <h4>Міжнародна сертифікація:</h4>
-                </div>
-                <ul className="teacher-main__item-list">
-                  <li>
-                    • TKT (Teaching Knowledge Test) для викладачів англійської
-                    мови;
-                  </li>
-                  <li>• Сертифікати: Cambridge, Oxford, Pearson та MOOC.</li>
-                </ul>
-              </div>
-            </li>
-            <li className="teacher-main__item">
-              <img src={PenIcon} alt="" />
-              <div className="teacher-main__desc">
-                <div className="teacher-main__header">
-                  <img src={PenIcon} alt="" />
-                  <h4>Авторка освітніх матеріалів:</h4>
-                </div>
-                <ul className="teacher-main__item-list">
-                  <li>
-                    • Розробниця практичних курсів та навчальних програм з
-                    англійської мови;
-                  </li>
-                  <li>• Співавторка підручників для різних спеціалізацій.</li>
-                </ul>
-              </div>
-            </li>
-            <li className="teacher-main__item">
-              <img src={PlanetIcon} alt="" />
-              <div className="teacher-main__desc">
-                <div className="teacher-main__header">
-                  <img src={PlanetIcon} alt="" />
-
-                  <h4>Міжнародний досвід:</h4>
-                </div>
-                <ul className="teacher-main__item-list">
-                  <li>
-                    • Консультант та учасник міжнародного освітнього стартапу
-                    (США);
-                  </li>
-                  <li>• Організаторка освітннього проєкту у Литві;</li>
-                  <li>• Учасниця освітніх тренінгів в Європі.</li>
-                </ul>
-              </div>
-            </li>
+              </li>
+            ))}
           </ul>
         </div>
       </div>
-
       <div className="course-results__gradient"></div>
     </section>
   );
 }
+
 export default HomeTeacher;

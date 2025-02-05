@@ -1604,6 +1604,16 @@ footer span {
   align-items: flex-start;
   gap: 8px;
   align-self: stretch;
+
+  opacity: 0;
+  transform: translateY(20px);
+
+  transition: opacity 0.6s ease-out, transform 2s ease-out;
+}
+
+.advantages-main__item.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .advantages-main__item-inner {
@@ -2532,6 +2542,9 @@ footer span {
   .course-form__description--mobile {
     width: 100%;
   }
+  .form__main {
+    width: 100%;
+  }
 }
 
 @media (max-width: 600px) {
@@ -2704,7 +2717,7 @@ footer span {
   }
 
   .custom-dots {
-    bottom: -30px !important;
+    bottom: -25 px !important;
   }
 
   .custom-dot {
@@ -2821,7 +2834,7 @@ footer span {
     font-weight: 700;
     line-height: var(--line-height-28, 28px); /* 140% */
   }
-  .form{
+  .form {
     padding: 120px 4px;
   }
 }
