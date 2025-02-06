@@ -14,7 +14,7 @@ function useScrollAnimation() {
           }
         });
       },
-      { threshold: 0.3 }
+      { threshold: 0.4 }
     );
 
     items.forEach((item) => observer.observe(item));
