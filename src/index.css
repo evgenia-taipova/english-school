@@ -1007,7 +1007,7 @@ footer span {
   align-items: flex-start;
   padding-right: 54px;
   align-self: stretch;
-
+  overflow-x: hidden;
   overflow-y: auto; /* Добавляем прокрутку */
 }
 

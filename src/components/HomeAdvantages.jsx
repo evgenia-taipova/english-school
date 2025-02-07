@@ -1,6 +1,7 @@
 import OkIcon from "../assets/okay.svg";
 import ImgAdv from "../assets/Home/Component-1/3.svg";
 import { motion } from "framer-motion";
+import { useScroll } from "../components/ScrollContext";
 
 function HomeAdvantages() {
   const fadeInUp = {
@@ -21,6 +22,8 @@ function HomeAdvantages() {
     hidden: { opacity: 0, scale: 0.8 },
     visible: { opacity: 1, scale: 1, transition: { duration: 0.6 } },
   };
+
+  const { formRef } = useScroll();
   return (
     <section className="advantages">
       <div className="advantages-inner">
@@ -87,6 +90,9 @@ function HomeAdvantages() {
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
             variants={fadeInUp}
+            onClick={() =>
+              formRef.current?.scrollIntoView({ behavior: "smooth" })
+            }
           >
             Розпочати навчання
           </motion.button>
