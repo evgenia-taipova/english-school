@@ -3169,9 +3169,15 @@ footer span {
   .themes-bg {
     left: -10px;
   }
+  .course-scroll__list {
+    gap: 24px;
+  }
 }
 
 @media (max-width: 425px) {
+  .course-scroll__list {
+    width: 100%;
+  }
   .teacher-main__image {
     height: 100%;
     border-radius: 14.613px;
