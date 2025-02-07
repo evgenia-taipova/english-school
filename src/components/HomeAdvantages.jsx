@@ -1,40 +1,48 @@
 import OkIcon from "../assets/okay.svg";
 import ImgAdv from "../assets/Home/Component-1/3.svg";
-import { useEffect } from "react";
-
-function useScrollAnimation() {
-  useEffect(() => {
-    const items = document.querySelectorAll(".advantages-main__item");
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("visible");
-          }
-        });
-      },
-      { threshold: 0.4 }
-    );
-
-    items.forEach((item) => observer.observe(item));
-
-    return () => items.forEach((item) => observer.unobserve(item));
-  }, []);
-}
+import { motion } from "framer-motion";
 
 function HomeAdvantages() {
-  useScrollAnimation();
+  const fadeInUp = {
+    hidden: { opacity: 0, y: -20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 1 } },
+  };
 
+  const fadeInList = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, staggerChildren: 0.2 },
+    },
+  };
+
+  const fadeInScale = {
+    hidden: { opacity: 0, scale: 0.8 },
+    visible: { opacity: 1, scale: 1, transition: { duration: 0.6 } },
+  };
   return (
     <section className="advantages">
       <div className="advantages-inner">
         <div className="advantages-main">
           <div className="advantages-main__text">
-            <h2 className="advantages-title">
+            <motion.h2
+              className="advantages-title"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.3 }}
+              variants={fadeInUp}
+            >
               Чому нас <span>обирають</span>?
-            </h2>
-            <ul className="advantages-main__list">
+            </motion.h2>
+
+            <motion.ul
+              className="advantages-main__list"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.3 }}
+              variants={fadeInList}
+            >
               <li className="advantages-main__item">
                 <img src={OkIcon} alt="" />
                 <div className="advantages-main__item-inner">
@@ -70,18 +78,33 @@ function HomeAdvantages() {
                   </p>
                 </div>
               </li>
-            </ul>
+            </motion.ul>
           </div>
-          <button className="button secondary">Розпочати навчання</button>
+
+          <motion.button
+            className="button secondary"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            variants={fadeInUp}
+          >
+            Розпочати навчання
+          </motion.button>
         </div>
-        <div className="advantages-img">
+        <motion.div
+          className="advantages-img"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.6 }}
+          variants={fadeInScale}
+        >
           <div className="advantages-img__ellipse"></div>
           <div className="advantages-img__main">
             <div className="advantages-img__inner">
               <img src={ImgAdv} alt="" />
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

@@ -35,7 +35,9 @@ function EnglishSpeakingITPage() {
             features={headerInfo.features}
             description={headerInfo.description}
           />
+
           <CourseDetails details={details} />
+
           <button
             className="button primary"
             onClick={() =>

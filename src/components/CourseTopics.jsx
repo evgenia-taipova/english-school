@@ -17,7 +17,7 @@ const CourseTopics = ({ topics, version }) => {
           >
             <span>{topic.id < 10 ? `0${topic.id}` : topic.id}</span>
             <div className={descriptionClass}>
-              <h4>{version === "v2" ? "ТЕМА" : topic.title}</h4>
+              <h4>{version === "v2" ? "Тема" : topic.title}</h4>
               <p>{topic.description}</p>
             </div>
           </li>

@@ -1607,16 +1607,6 @@ footer span {
   align-items: flex-start;
   gap: 8px;
   align-self: stretch;
-
-  opacity: 0;
-  transform: translateY(20px);
-
-  transition: opacity 1s ease-out, transform 2s ease-out;
-}
-
-.advantages-main__item.visible {
-  opacity: 1;
-  transform: translateY(0);
 }
 
 .advantages-main__item-inner {
@@ -2282,6 +2272,16 @@ footer span {
     width: 800px;
     height: 977px;
   }
+  .course-topic__description-v2 p {
+    font-size: 28px;
+    width: 100%;
+  }
+  .course-topic__description-v2 {
+    /* align-items: flex-start;
+    flex-direction: column;
+    text-align-last: left; */
+    gap: 12px;
+  }
 }
 
 @media (max-width: 1090px) {
@@ -2431,6 +2431,15 @@ footer span {
     width: 128vw;
     /* height: auto; */
     object-fit: cover;
+  }
+  .course-topic__description-v2 {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+    align-items: flex-start;
+  }
+  .course-topic__description-v2 p {
+    text-align: left;
   }
 }
 
@@ -3098,7 +3107,8 @@ footer span {
     padding: 80px 6px;
   }
   .course-topic__heading h2,
-  .course-topic__description h4 {
+  .course-topic__description h4,
+  .course-topic__description-v2 h4 {
     font-size: 36px;
     line-height: normal;
   }
@@ -3108,24 +3118,41 @@ footer span {
     line-height: 28px;
     text-align: center;
   }
-  .course-topic__item span {
+  .course-topic__item span,
+  .course-topic__item.v2 span {
     padding-left: 0;
     font-size: 40px;
     font-style: normal;
     font-weight: 700;
     line-height: 55px;
   }
-  .course-topic__item {
+  .course-topic__item,
+  .course-topic__item.v2 {
     flex-direction: column;
     gap: 12px;
   }
-  .course-topic__description p {
+  .course-topic__description p,
+  .course-topic__description-v2 p {
     font-size: var(--font-size-20, 20px);
     font-style: normal;
     font-weight: 400;
     line-height: var(--line-height-28, 28px); /* 140% */
   }
 
+  .course-topic__description-v2 {
+    width: 100%;
+  }
+  .course-topic__list {
+    gap: 32px;
+  }
+
+  .course-topic__item.v2 {
+    align-items: center;
+  }
+  .course-topic__item.v2 span {
+    width: 100%;
+    text-align: left;
+  }
   .course-topic__info {
     align-items: center;
   }
