@@ -23,7 +23,7 @@ const CourseTopics = ({ topics, version }) => {
           </li>
         ))}
       </ul>
-      <button className="button secondary" onClick={() => setShowAll(!showAll)}>
+      <button className="button primary" onClick={() => setShowAll(!showAll)}>
         {showAll ? "Сховати" : "Показати усю програму"}
       </button>
     </div>

@@ -25,7 +25,7 @@ function HomeAdvantages() {
 
   const { formRef } = useScroll();
   return (
-    <section className="advantages">
+    <section className="advantages" id="about">
       <div className="advantages-inner">
         <div className="advantages-main">
           <div className="advantages-main__text">

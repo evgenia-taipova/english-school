@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import logo from "../assets/logo.svg";
+import logo from "../assets/logo-big.png";
 
 function Footer() {
   return (
@@ -31,7 +31,12 @@ function Footer() {
         </div>
       </div>
       <div className="footer_divider"></div>
-      <span>© 2024-2025 Nova.School</span>
+      <span>
+        © 2024-2025 Nova.School. Powered by{" "}
+        <a href="http://puzzledesire.com" target="_blank">
+          Puzzle Desire
+        </a>
+      </span>
     </footer>
   );
 }

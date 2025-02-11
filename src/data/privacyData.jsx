@@ -3,7 +3,9 @@ const privacyData = [
     title: "1. Who We Are",
     content: {
       paragraphs: [
-        `NovaSchool operates the website www.novaschool.com and is committed to protecting your personal data. If you have any questions or concerns about this policy, you can contact us at <a href="" className="privacy-link">Nova.school@gmail.com</a>.`,
+        `NovaSchool operates the website  <a href="/" className="privacy-link">
+              www.novaschool.com
+            </a> and is committed to protecting your personal data. If you have any questions or concerns about this policy, you can contact us at <a href="mailto:nova.school@gmail.com" className="privacy-link">nova.school@gmail.com</a>.`,
       ],
     },
   },
@@ -12,11 +14,11 @@ const privacyData = [
     content: {
       paragraphs: ["We collect the following categories of personal data:"],
       listItems: [
-        "<strong>Contact Information:</strong> Your name, email address, phone number, and shipping address.",
-        "<strong>Account Data:</strong> Username, password, and other registration details.",
-        "<strong>Transaction Data:</strong> Payment information, order history, and billing details.",
+        "<strong>Contact Information:</strong> your name, email address, phone number, and shipping address.",
+        "<strong>Account Data:</strong> username, password, and other registration details.",
+        "<strong>Transaction Data:</strong> payment information, order history, and billing details.",
         "<strong>Technical Data:</strong> IP address, browser type, and device information (via cookies and analytics tools).",
-        "<strong>Communication Data:</strong> Messages or feedback you send to us via forms or email.",
+        "<strong>Communication Data:</strong> messages or feedback you send to us via forms or email.",
       ],
       afterListText: [
         "We do not collect sensitive personal data unless explicitly required and consented to.",
@@ -97,7 +99,7 @@ const privacyData = [
       afterListText: [
         "We do not sell your personal data to third parties. If data is transferred outside the EU/EEA, we ensure compliance with GDPR through appropriate safeguards, such as Standard Contractual Clauses.",
         "<br/>",
-        `To exercise these rights, please contact us at <a href="" className="privacy-link">nova.school@gmail.com</a>.`,
+        `To exercise these rights, please contact us at <a href="mailto:nova.school@gmail.com" className="privacy-link">nova.school@gmail.com</a>.`,
         "We will respond within one month of receiving your request.",
       ],
     },
@@ -134,86 +136,6 @@ const privacyData = [
       ],
     },
   },
-  // {
-  //   title: "6. Retention of Your Data",
-  //   content: (
-  //     <>
-  //       <p>We use your personal data for the following purposes:</p>
-  //       <ul>
-  //         <li>To process and fulfill your orders.</li>
-  //         <li>To provide customer support and respond to your inquiries.</li>
-  //         <li>
-  //           To send updates about our products, promotions, or policies (only
-  //           with your explicit consent).
-  //         </li>
-  //         <li>To improve our website and services through analytics.</li>
-  //         <li>To comply with legal obligations and resolve disputes.</li>
-  //       </ul>
-  //       <p>
-  //         We do not collect sensitive personal data unless explicitly required
-  //         and consented to.
-  //       </p>
-  //     </>
-  //   ),
-  // },
-  // {
-  //   title: "7. Your Rights Under GDPR",
-  //   content: (
-  //     <>
-  //       <p>We use your personal data for the following purposes:</p>
-  //       <ul>
-  //         <li>To process and fulfill your orders.</li>
-  //         <li>To provide customer support and respond to your inquiries.</li>
-  //         <li>
-  //           To send updates about our products, promotions, or policies (only
-  //           with your explicit consent).
-  //         </li>
-  //         <li>To improve our website and services through analytics.</li>
-  //         <li>To comply with legal obligations and resolve disputes.</li>
-  //       </ul>
-  //       <p>
-  //         We do not collect sensitive personal data unless explicitly required
-  //         and consented to.
-  //       </p>
-  //     </>
-  //   ),
-  // },
-  // {
-  //   title: "8. Cookies and Tracking",
-  //   content: (
-  //     <>
-  //       <p>We use your personal data for the following purposes:</p>
-  //       <ul>
-  //         <li>To process and fulfill your orders.</li>
-  //         <li>To provide customer support and respond to your inquiries.</li>
-  //         <li>
-  //           To send updates about our products, promotions, or policies (only
-  //           with your explicit consent).
-  //         </li>
-  //         <li>To improve our website and services through analytics.</li>
-  //         <li>To comply with legal obligations and resolve disputes.</li>
-  //       </ul>
-  //       <p>
-  //         We do not collect sensitive personal data unless explicitly required
-  //         and consented to.
-  //       </p>
-  //     </>
-  //   ),
-  // },
-  // {
-  //   title: "9. Security of Your Data",
-  //   content: (
-  //     <p>
-  //       We implement robust technical and organizational measures to protect
-  //       your personal data from unauthorized access, loss, or misuse. Despite
-  //       our efforts, no online system is completely secure, and we encourage you
-  //       to take precautions, such as using strong passwords.
-  //     </p>
-  //   ),
-  // },
-  // {
-
-  // Добавьте остальные секции
 ];
 
 export default privacyData;

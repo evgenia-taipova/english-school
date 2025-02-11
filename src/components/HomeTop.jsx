@@ -32,7 +32,7 @@ function HomeTop() {
   }, []);
 
   return (
-    <section className="home-top" ref={ref}>
+    <section className="home-top" ref={ref} id="courses">
       <motion.div
         className="home-header"
         initial={{ opacity: 0, y: 50 }}

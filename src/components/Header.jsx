@@ -1,19 +1,26 @@
-import logo from "../assets/logo.svg";
+import logo from "../assets/logo.png";
 import menuBtn from "../assets/menu-btn.svg";
 import closeBtn from "../assets/close-btn.svg";
-import { Link } from "react-router-dom";
-import { useScroll } from "./ScrollContext";
+import { Link, useLocation } from "react-router-dom";
 import { useState } from "react";
+import { useEffect } from "react";
 
 function Header() {
-  const { formRef } = useScroll();
   const [menuOpen, setMenuOpen] = useState(false);
+  const location = useLocation();
 
-  const handleScrollToForm = () => {
-    if (formRef.current) {
-      formRef.current.scrollIntoView({ behavior: "smooth" });
+  // Прокрутка к нужному блоку после перехода на главную страницу
+  useEffect(() => {
+    const hash = location.hash.substring(1);
+    if (hash) {
+      const element = document.getElementById(hash);
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: "smooth" });
+        }, 300); // Задержка, чтобы дождаться загрузки контента
+      }
     }
-  };
+  }, [location]);
   return (
     <>
       <header>
@@ -24,20 +31,23 @@ function Header() {
 
           <nav className="header__nav">
             <li className="header__nav-item">
-              <a href="#courses">Курси</a>
+              <a href="/#courses">Курси</a>
             </li>
             <li className="header__nav-item">
-              <a href="#lecturers">Лектори</a>
+              <a href="/#lecturers">Лектори</a>
             </li>
             <li className="header__nav-item">
-              <a href="#about">Про нас</a>
+              <a href="/#about">Про нас</a>
             </li>
             <li className="header__nav-item">
-              <a href="#contacts">Контакти</a>
+              <a href="/#contacts">Контакти</a>
             </li>
           </nav>
         </div>
-        <button className="header__btn" onClick={handleScrollToForm}>
+        <button
+          className="header__btn"
+          onClick={() => (window.location.href = "/#contacts")}
+        >
           Розпочати навчання
         </button>
         <button className="header__menu" onClick={() => setMenuOpen(true)}>
@@ -61,22 +71,22 @@ function Header() {
           <div className="mobile-menu__main">
             <nav className="footer__main-nav">
               <li className="footer__nav-item">
-                <a href="#courses" onClick={() => setMenuOpen(false)}>
+                <a href="/#courses" onClick={() => setMenuOpen(false)}>
                   Курси
                 </a>
               </li>
               <li className="footer__nav-item">
-                <a href="#lecturers" onClick={() => setMenuOpen(false)}>
+                <a href="/#lecturers" onClick={() => setMenuOpen(false)}>
                   Лектори
                 </a>
               </li>
               <li className="footer__nav-item">
-                <a href="#about" onClick={() => setMenuOpen(false)}>
+                <a href="/#about" onClick={() => setMenuOpen(false)}>
                   Про нас
                 </a>
               </li>
               <li className="footer__nav-item">
-                <a href="#contacts" onClick={() => setMenuOpen(false)}>
+                <a href="/#contacts" onClick={() => setMenuOpen(false)}>
                   Контакти
                 </a>
               </li>
@@ -87,7 +97,7 @@ function Header() {
                 onClick={() => {
                   setMenuOpen(false);
                   setTimeout(() => {
-                    handleScrollToForm();
+                    window.location.href = "/#contacts";
                   }, 200);
                 }}
               >

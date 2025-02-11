@@ -33,7 +33,7 @@ function HomeTeacher() {
   }, []);
 
   return (
-    <section className="teacher" ref={ref}>
+    <section className="teacher" ref={ref} id="lecturers">
       <div className="teacher-main">
         <div className="teacher-header-mobile">
           <h2>Викладач у Nova.School</h2>

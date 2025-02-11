@@ -215,7 +215,7 @@ const CourseSlider = ({ title, category }) => {
                 course.id === 7 && isLargeScreen ? { paddingRight: "60px" } : {}
               }
             >
-              <span>{`0${course.id}`}</span>
+              <span>{course.id < 10 ? `0${course.id}` : course.id}</span>
               <div className="slide-content__header">
                 <h3>{course.title}</h3>
                 <button>
@@ -248,7 +248,7 @@ const CourseSlider = ({ title, category }) => {
                     : {}
                 }
               >
-                <span>{`0${course.id}`}</span>
+                <span>{course.id < 10 ? `0${course.id}` : course.id}</span>
                 <div className="slide-content__header">
                   <h3>{course.title}</h3>
                   <button>
@@ -257,8 +257,8 @@ const CourseSlider = ({ title, category }) => {
                 </div>
                 <p>{course.description}</p>
               </div>
-              <button className="slide-button">
-                <img src={ArrowIcon} alt="" />
+              <button className="button primary">
+                Подробицi
               </button>
             </div>
           ))}
