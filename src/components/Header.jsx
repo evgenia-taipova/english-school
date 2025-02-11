@@ -1,4 +1,4 @@
-import logo from "../assets/logo.png";
+import logo from "../assets/logo-small.png";
 import menuBtn from "../assets/menu-btn.svg";
 import closeBtn from "../assets/close-btn.svg";
 import { Link, useLocation } from "react-router-dom";
