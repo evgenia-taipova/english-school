@@ -1,5 +1,6 @@
 import TelegramIcon from "../assets/links/telegram.svg";
 import WhatsappIcon from "../assets/links/whatsapp.svg";
+import QRIcon from "../assets/qr.svg";
 
 import { useState, forwardRef } from "react";
 import "react-international-phone/style.css";
@@ -11,46 +12,7 @@ import {
   buildCountryData,
 } from "react-international-phone";
 
-const allowedCountries = [
-  "us",
-  "ca", // США, Канада
-  "ua",
-  "gb",
-  "de",
-  "fr",
-  "es",
-  "it",
-  "pl",
-  "cz",
-  "sk",
-  "hu",
-  "at",
-  "bg",
-  "ro",
-  "se",
-  "no",
-  "dk",
-  "fi",
-  "lt",
-  "lv",
-  "ee",
-  "hr",
-  "rs",
-  "me",
-  "mk",
-  "si", // Европа
-  "kz", // Казахстан
-  "br",
-  "ar",
-  "cl",
-  "co",
-  "pe",
-  "uy",
-  "mx",
-  "ec",
-  "py",
-  "bo", // Южная Америка
-];
+import { allowedCountries } from "../data/countries";
 
 const countries = defaultCountries
   .map(parseCountry)
@@ -74,21 +36,24 @@ const CourseForm = forwardRef((props, ref) => {
         </div>
         <div className="course-form__links">
           <p>Або зв’яжіться з нами через мессенджери:</p>
-          <div className="course-links__icons">
-            <a
-              href="https://t.me/CareerEnglishHub"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img src={TelegramIcon} alt="Telegram" />
-            </a>
-            <a
-              href="https://wa.me/message/EUETMN74WSZ2A1"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img src={WhatsappIcon} alt="WhatsApp" />
-            </a>
+          <div className="course-links">
+            <img src={QRIcon} alt="" />
+            <div className="course-links__icons">
+              <a
+                href="https://t.me/CareerEnglishHub"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src={TelegramIcon} alt="Telegram" />
+              </a>
+              <a
+                href="https://wa.me/message/EUETMN74WSZ2A1"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src={WhatsappIcon} alt="WhatsApp" />
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -134,7 +99,7 @@ const CourseForm = forwardRef((props, ref) => {
       </form>
       <div className="form-desc__mobile">
         <p>Або зв’яжіться з нами через мессенджери:</p>
-        <div className="course-links__icons">
+        <div className="course-links__icons__mobile">
           <a
             href="https://t.me/CareerEnglishHub"
             target="_blank"

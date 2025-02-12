@@ -1339,7 +1339,7 @@ footer span {
 }
 
 .course-form__description--mobile {
-  display: none; /* По умолчанию скрываем мобильный текст */
+  display: none;
 }
 
 .course-form__links {
@@ -1349,10 +1349,18 @@ footer span {
   gap: 16px;
 }
 
-.course-links__icons {
+.course-links {
   display: flex;
   align-items: flex-start;
   gap: 24px;
+}
+
+.course-links__icons {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-self: stretch;
 }
 
 .form-desc__mobile {
@@ -2680,6 +2688,11 @@ footer span {
     gap: 16px;
     align-self: stretch;
     text-align: center;
+  }
+  .course-links__icons__mobile {
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
   }
 
   .course-form form {
