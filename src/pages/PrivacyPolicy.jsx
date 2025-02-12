@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import PrivacyList from "../components/PrivacyList";
 import LanguageSelector from "../components/LanguageSelector";
 
@@ -35,11 +35,25 @@ const translations = {
 
 function PrivacyPolicy() {
   const [language, setLanguage] = useState("en");
+
+  useEffect(() => {
+    const savedLanguage = localStorage.getItem("selectedLanguage");
+    if (savedLanguage) {
+      setLanguage(savedLanguage);
+    }
+  }, []);
+
+  const handleLanguageChange = (lang) => {
+    setLanguage(lang);
+    localStorage.setItem("selectedLanguage", lang);
+  };
+
+
   const t = translations[language];
   return (
     <>
       <section className="privacy">
-        <LanguageSelector language={language} setLanguage={setLanguage}/>
+        <LanguageSelector language={language} setLanguage={handleLanguageChange}/>
         <div className="privacy__top">
           <div className="privacy__top-header">
             <span>{t.effectiveDate}</span>
