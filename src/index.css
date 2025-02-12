@@ -857,6 +857,7 @@ footer span {
   mix-blend-mode: lighten;
   position: relative;
   gap: 40px;
+  overflow: hidden;
 }
 
 .course-description__item {
