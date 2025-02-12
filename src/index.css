@@ -1983,6 +1983,7 @@ footer span {
   align-self: stretch;
   position: relative;
   background: var(--Body-bg-2, #0a002b);
+  overflow: hidden;
 }
 
 .teacher-main {
