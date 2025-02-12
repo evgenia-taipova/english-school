@@ -1,11 +1,4 @@
-import ItIcon from "../../assets/forwhom/it.svg";
-import LampIcon from "../../assets/forwhom/lamp.svg";
-import PenIcon from "../../assets/forwhom/pen.svg";
-import PeopleIcon from "../../assets/forwhom/people.svg";
-import SpecIcon from "../../assets/forwhom/spec.svg";
 import StudentIcon from "../../assets/forwhom/student.svg";
-import SystemIcon from "../../assets/forwhom/system.svg";
-import SettingIcon from "../../assets/forwhom/setting.svg";
 import WebIcon from "../../assets/forwhom/web.svg";
 import BagIcon from "../../assets/forwhom/bag.svg";
 import CoinIcon from "../../assets/forwhom/coin.svg";
@@ -106,21 +99,87 @@ export const topics = [
   },
   {
     id: 2,
-    description:
-      "Leadership in business",
+    description: "Leadership in business",
   },
   {
     id: 3,
-    description:
-      "Giving and receiving feedback at work",
+    description: "Giving and receiving feedback at work",
   },
   {
     id: 4,
-    description:
-      "Emotional intelligence",
+    description: "Emotional intelligence",
   },
   {
     id: 5,
     description: "Hard and soft skills",
   },
+  {
+    id: 6,
+    description: "Corporate DEI",
+  },
+  {
+    id: 7,
+    description: "Teamwork",
+  },
+  {
+    id: 8,
+    description: "Constructive conflict resolution",
+  },
+  {
+    id: 9,
+    description: "Time management",
+  },
+  {
+    id: 10,
+    description: "Hunting for the right person",
+  },
+  {
+    id: 11,
+    description: "Business meetings",
+  },
+  {
+    id: 12,
+    description: "Negotiations",
+  },
+  {
+    id: 13,
+    description: "Business phrases for everyday communication",
+  },
+  {
+    id: 14,
+    description: "Finance and Accounting",
+  },
+  {
+    id: 15,
+    description: "How to present pie charts, graphs",
+  },
+  {
+    id: 16,
+    description: "Environmental issues, climate change, and their influence on Economics",
+  },
+  {
+    id: 17,
+    description: "Deglobalization",
+  },
+  {
+    id: 18,
+    description: "Business Trends",
+  },
+  {
+    id: 19,
+    description: "Luxury Brands",
+  },
+  {
+    id: 20,
+    description: "PEST analysis",
+  },
+  {
+    id: 21,
+    description: "AI and its Influence on Business",
+  },
+  {
+    id: 22,
+    description: "Consumer Society",
+  },
 ];
+

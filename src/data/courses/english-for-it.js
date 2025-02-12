@@ -104,32 +104,53 @@ export const programDescription = "9 модулів – 24 заняття по 6
 export const topics = [
   {
     id: 1,
-    title: "Модуль 1",
+    title: "Module 1",
     description:
       "What is IT? Jobs in IT. A usual working day at an IT company. Present Simple vs Present Continuous. Prepositions of time",
   },
   {
     id: 2,
-    title: "Модуль 2",
+    title: "Module 2",
     description:
       "Computer systems. Hardware and Software. Modal Verbs of possibility and obligation - Can, Must, Have to. Past Simple vs Present Perfect",
   },
   {
     id: 3,
-    title: "Модуль 3",
+    title: "Module 3",
     description:
       "Websites, their types and structure. Future Tenses. Adjectives, degrees of comparison",
   },
   {
     id: 4,
-    title: "Модуль 4",
+    title: "Module 4",
     description:
-      "What is IT? Jobs in IT. A usual working day at an IT company. Present Simple vs Present Continuous. Prepositions of time",
+      "Databases. Data storage infrastructure. Data backup.Departments in IT. Past Tenses - Past Simple, Past Continuous, Past Perfect.Used to do, Be used to doing, get used to doing",
   },
   {
     id: 5,
-    title: "Модуль 5",
+    title: "Module 5",
+    description: "Security. Network. Passive Voice",
+  },
+  {
+    id: 6,
+    title: "Module 6",
     description:
-      "What is IT? Jobs in IT. A usual working day at an IT company. Present Simple vs Present Continuous. Prepositions of time",
+      "Quality Assurance. Present Perfect Continuous. Verbs used with infinitive or gerund",
+  },
+  {
+    id: 7,
+    title: "Module 7",
+    description: "Debugging",
+  },
+  {
+    id: 8,
+    title: "Module 8",
+    description: "Artificial Intelligence. Types of Questions",
+  },
+  {
+    id: 9,
+    title: "Module 9",
+    description:
+      "Communication. Work Ethics. The most common phrases used in business communication. Conditional Sentences",
   },
 ];

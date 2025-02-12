@@ -104,4 +104,53 @@ export const topics = [
     id: 5,
     description: "Travel and Tourism. Globalisation",
   },
+  {
+    id: 6,
+    description: "Food and Cuisine",
+  },
+  {
+    id: 7,
+    description: "Festivals and Traditions. Cultural Differences and Stereotypes",
+  },
+  {
+    id: 8,
+    description: "Technology and Modern Life. Future Innovations",
+  },
+  {
+    id: 9,
+    description: "Social Media and Communication",
+  },
+  {
+    id: 10,
+    description: "Artificial Intelligence",
+  },
+  {
+    id: 11,
+    description: "Books, Movies and TV Shows",
+  },
+  {
+    id: 12,
+    description: "Music and Art",
+  },
+  {
+    id: 13,
+    description: "Gaming and Virtual Reality",
+  },
+  {
+    id: 14,
+    description: "The Power of Media",
+  },
+  {
+    id: 15,
+    description: "Climate Change",
+  },
+  {
+    id: 16,
+    description: "Health and Wellness",
+  },
+  {
+    id: 17,
+    description: "Equality and Diversity",
+  },
 ];
+

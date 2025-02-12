@@ -107,6 +107,42 @@ export const topics = [
   },
   {
     id: 5,
-    description: "Human",
+    description: "Human Rights",
+  },
+  {
+    id: 6,
+    description: "Freedom of Speech",
+  },
+  {
+    id: 7,
+    description: "Equality, Diversity, Inclusion ",
+  },
+  {
+    id: 8,
+    description: "Human Trafficking",
+  },
+  {
+    id: 9,
+    description: "Refugees, IDPs",
+  },
+  {
+    id: 10,
+    description: "Ecology Issues",
+  },
+  {
+    id: 11,
+    description: "Project Proposal Writing PART I",
+  },
+  {
+    id: 12,
+    description: "Project Proposal Writing PART II",
+  },
+  {
+    id: 13,
+    description: "Project Sustainability",
+  },
+  {
+    id: 14,
+    description: "Effective communication and relations with media",
   },
 ];

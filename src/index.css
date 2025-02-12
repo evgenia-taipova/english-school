@@ -742,6 +742,7 @@ footer span {
 
 .slide .button.primary {
   width: 180px;
+  margin-top: auto;
 }
 
 .button.primary {
@@ -1129,6 +1130,7 @@ footer span {
   background-repeat: no-repeat;
   background-blend-mode: lighten;
   mix-blend-mode: lighten;
+  background-size: cover;
 }
 
 /* Topics */
@@ -1720,7 +1722,7 @@ footer span {
 
 .home-top {
   display: flex;
-  padding: 112px 320px;
+  padding: 112px 288px;
   flex-direction: column;
   align-items: flex-start;
   gap: 64px;
@@ -1728,8 +1730,9 @@ footer span {
 }
 
 .home-header {
+  padding-left: 32px;
   display: flex;
-  width: 622px;
+  width: 654px;
   flex-direction: column;
   align-items: flex-start;
   gap: 24px;
@@ -1779,6 +1782,7 @@ footer span {
 }
 
 .slider-container h2 {
+  padding-left: 32px;
   align-self: stretch;
 
   font-size: var(--font-size-32, 32px);
@@ -1800,24 +1804,18 @@ footer span {
   -webkit-text-fill-color: transparent;
 }
 
-/* .slick-slider .slick-list {
-  gap: 20px;
-  display: flex;
-} */
 .slide {
   display: flex !important;
   flex-direction: column;
-  /* justify-content: flex-end;
-  align-items: flex-end; */
   align-items: flex-start;
   padding: 48px 20px 32px 20px;
-
-  gap: 16px;
-
   position: relative;
+  gap: 16px;
+  height: 100%;
 }
 
 .slick-slide {
+  display: flex !important;
   border-radius: 16px;
   border: 2px solid rgba(69, 44, 145, 0.6);
   /* backdrop-filter: blur(6px); */
@@ -1838,6 +1836,7 @@ footer span {
       no-repeat,
     var(--Body-bg-1, rgba(10, 0, 43, 0.8)) !important;
   /* background: inherit !important;  */
+  height: auto !important;
 }
 
 .slide-content {
@@ -1977,35 +1976,23 @@ footer span {
 .teacher {
   display: flex;
   min-width: var(--width-96, 96px);
-  padding: 112px 160px;
+  padding: 64px 160px;
   flex-direction: column;
   align-items: center;
   gap: 64px;
   align-self: stretch;
   position: relative;
-
-  background-image: url(./assets/bg-results.png);
-  background-size: cover;
-  background-position: right;
-  background-repeat: no-repeat;
-  background-blend-mode: lighten;
-  mix-blend-mode: lighten;
+  background: var(--Body-bg-2, #0a002b);
 }
 
 .teacher-main {
   display: flex;
+  box-sizing: border-box;
   padding: 64px 36px;
   justify-content: space-between;
   align-items: center;
   align-self: stretch;
-
-  border-radius: 16px;
-  border: var(--stroke-weight-1, 1px) solid
-    var(--General-Stroke-primary, rgba(255, 255, 255, 0.3));
-  background: var(--Body-bg-2, #0a002b);
-  /* backdrop-filter: blur(6px); */
   gap: 40px;
-  overflow: hidden;
 }
 
 .teacher-main__text {
@@ -2163,7 +2150,7 @@ footer span {
   }
 
   .teacher {
-    padding: 112px;
+    padding: 64px 112px;
   }
 
   .advantages {
@@ -2205,7 +2192,7 @@ footer span {
     padding: 80px 120px 16px;
   }
   .teacher {
-    padding: 112px 60px;
+    padding: 64px 60px;
   }
 
   .teacher-main__image {
@@ -2392,99 +2379,6 @@ footer span {
 }
 
 @media (max-width: 980px) {
-  header {
-    padding: 0 60px;
-  }
-  .header__main {
-    gap: 10px;
-  }
-
-  .privacy {
-    padding: 40px 60px;
-  }
-  footer {
-    padding: 40px 60px 16px;
-    gap: 24px;
-  }
-
-  .footer__nav-item {
-    padding: 12px 8px;
-  }
-  .footer__main-links {
-    width: 240.33px;
-  }
-
-  .footer__logo-img {
-    width: auto;
-    height: 40px;
-  }
-  .teacher-main__text {
-    width: 100%;
-  }
-
-  .advantages-img {
-    position: absolute;
-
-    z-index: -1;
-    opacity: 0.4;
-    left: 42%;
-  }
-
-  .course-form__description--desktop {
-    display: none;
-  }
-  .course-form__description--mobile {
-    display: block;
-    width: 90%;
-  }
-  .course-form form {
-    width: 60%;
-  }
-
-  .course-description__title {
-    font-size: 42px;
-    line-height: normal;
-  }
-  .course-description__info {
-    font-size: 22px;
-  }
-
-  .course-results__title,
-  .course-themes__title {
-    font-size: 42px;
-    line-height: normal;
-  }
-  .course-themes__benefits {
-    display: none;
-  }
-  .course-themes {
-    gap: 0;
-    position: relative;
-    overflow: hidden;
-    display: block;
-  }
-  .course-themes__main {
-    padding-left: 100px;
-
-    position: none;
-  }
-  .themes-bg {
-    width: 128vw;
-    /* height: auto; */
-    object-fit: cover;
-  }
-  .course-topic__description-v2 {
-    flex-direction: column;
-    gap: 12px;
-    text-align: center;
-    align-items: flex-start;
-  }
-  .course-topic__description-v2 p {
-    text-align: left;
-  }
-}
-
-@media (max-width: 800px) {
   /* Header */
   .header__menu {
     display: block;
@@ -2593,6 +2487,7 @@ footer span {
     opacity: 0.6;
     margin-top: 8px;
   }
+
   /* Footer */
 
   footer {
@@ -2629,6 +2524,102 @@ footer span {
     text-align: center;
   }
 
+  .privacy {
+    padding: 40px 60px;
+  }
+  /* footer {
+    padding: 40px 60px 16px;
+    gap: 24px;
+  }
+
+  .footer__nav-item {
+    padding: 12px 8px;
+  }
+  .footer__main-links {
+    width: 240.33px;
+  }
+
+  .footer__logo-img {
+    width: auto;
+    height: 40px; */
+  /* } */
+  .teacher-main__text {
+    width: 100%;
+  }
+
+  .advantages-img {
+    position: absolute;
+
+    z-index: -1;
+    opacity: 0.4;
+    left: 42%;
+  }
+
+  .course-form__description--desktop {
+    display: none;
+  }
+  .course-form__description--mobile {
+    display: block;
+    width: 90%;
+  }
+  .course-form form {
+    width: 60%;
+  }
+
+  .course-description__title {
+    font-size: 42px;
+    line-height: normal;
+  }
+  .course-description__info {
+    font-size: 22px;
+  }
+
+  .course-results__title,
+  .course-themes__title {
+    font-size: 42px;
+    line-height: normal;
+  }
+  .course-themes__benefits {
+    display: none;
+  }
+  .course-themes {
+    gap: 0;
+    position: relative;
+    overflow: hidden;
+    display: block;
+  }
+  .course-themes__main {
+    padding-left: 100px;
+
+    position: none;
+  }
+  .themes-bg {
+    width: 128vw;
+    /* height: auto; */
+    object-fit: cover;
+  }
+  .course-topic__description-v2 {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+    align-items: flex-start;
+  }
+  .course-topic__description-v2 p {
+    text-align: left;
+  }
+
+  .slick-slider .slick-track {
+    gap: 0px;
+  }
+  .home-header {
+    padding-left: 0;
+  }
+  .slider-container h2 {
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 800px) {
   .home-top {
     padding: 80px;
   }
@@ -2974,7 +2965,7 @@ footer span {
   }
 
   .teacher {
-    padding: 120px 4px;
+    padding: 64px 4px;
   }
   .teacher-main {
     padding: 32px 12px;

@@ -1,4 +1,4 @@
-import { courses } from "../components/CourseSlider";
+import { courses } from "../data/coursesCards";
 import HomeAdvantages from "../components/HomeAdvantages";
 import HomeForm from "../components/HomeForm";
 import HomeTeacher from "../components/HomeTeacher";

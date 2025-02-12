@@ -1,14 +1,6 @@
-import ItIcon from "../../assets/forwhom/it.svg";
-import LampIcon from "../../assets/forwhom/lamp.svg";
-import PenIcon from "../../assets/forwhom/pen.svg";
+
 import PeopleIcon from "../../assets/forwhom/people.svg";
-import SpecIcon from "../../assets/forwhom/spec.svg";
 import StudentIcon from "../../assets/forwhom/student.svg";
-import SystemIcon from "../../assets/forwhom/system.svg";
-import SettingIcon from "../../assets/forwhom/setting.svg";
-import WebIcon from "../../assets/forwhom/web.svg";
-import BagIcon from "../../assets/forwhom/bag.svg";
-import CoinIcon from "../../assets/forwhom/coin.svg";
 import PlanetIcon from "../../assets/forwhom/planet.svg";
 
 import ClockIcon from "../../assets/details/clock.svg";
@@ -101,7 +93,7 @@ export const topics = [
   },
   {
     id: 3,
-    description: "Common law VS civil law",
+    description: "Common law vs civil law",
   },
   {
     id: 4,
@@ -111,4 +103,94 @@ export const topics = [
     id: 5,
     description: "Legislation",
   },
+  {
+    id: 6,
+    description: "Constitutional Law. Constitutional Rights",
+  },
+  {
+    id: 7,
+    description: "Civil Litigation",
+  },
+  {
+    id: 8,
+    description: "Company Law",
+  },
+  {
+    id: 9,
+    description: "Contracts",
+  },
+  {
+    id: 10,
+    description: "Employment Law",
+  },
+  {
+    id: 11,
+    description: "Intellectual Property",
+  },
+  {
+    id: 12,
+    description: "Statute of the International Court of Justice",
+  },
+  {
+    id: 13,
+    description: "Criminal Law",
+  },
+  {
+    id: 14,
+    description: "Court Trial",
+  },
+  {
+    id: 15,
+    description: "War Crimes",
+  },
+  {
+    id: 16,
+    description: "Arbitration",
+  },
+  {
+    id: 17,
+    description: "Discrimination",
+  },
+  {
+    id: 18,
+    description: "Land Ownership",
+  },
+  {
+    id: 19,
+    description: "Money Laundering",
+  },
+  {
+    id: 20,
+    description: "Cybersecurity & Fraud",
+  },
+  {
+    id: 21,
+    description: "Civil Litigation",
+  },
+  {
+    id: 22,
+    description: "Legal Writing",
+  },
+  {
+    id: 23,
+    description: "Statute of the International Court of Justice",
+  },
+  {
+    id: 24,
+    description: "Vienna Convention on the Law of Treaties",
+  },
+  {
+    id: 25,
+    description: "Treaty on European Union",
+  },
+  {
+    id: 26,
+    description: "Treaty on the Functioning of the European Union",
+  },
+  {
+    id: 27,
+    description: "European–Ukraine Agreement",
+  },
 ];
+
+

@@ -77,32 +77,75 @@ export const programDescription = "12 модулів – 24 заняття по 
 export const topics = [
   {
     id: 1,
-    title: "Модуль 1",
+    title: "Module 1",
     description:
       "Present Simple & Present Continuous (revision). Common adverbs of frequency (always, sometimes, never). Sentence structure",
   },
   {
     id: 2,
-    title: "Модуль 2",
+    title: "Module 2",
     description:
       "Past Simple Tense. Used to do. Prepositions of time",
   },
   {
     id: 3,
-    title: "Модуль 3",
+    title: "Module 3",
     description:
       "Past Continuous Tense. Past Continuous vs Past Simple",
   },
   {
     id: 4,
-    title: "Модуль 4",
+    title: "Module 4",
     description:
-      "What is IT? Jobs in IT. A usual working day at an IT company. Present Simple vs Present Continuous. Prepositions of time",
+      "Expressing future",
   },
   {
     id: 5,
-    title: "Модуль 5",
+    title: "Module 5",
     description:
-      "What is IT? Jobs in IT. A usual working day at an IT company. Present Simple vs Present Continuous. Prepositions of time",
+      "Adjectives and adverbs. Comparatives and Superlatives",
+  },
+  {
+    id: 6,
+    title: "Module 6",
+    description:
+      "Present Perfect Tense",
+  },
+  {
+    id: 7,
+    title: "Module 7",
+    description:
+      "Present Perfect vs Past Simple",
+  },
+  {
+    id: 8,
+    title: "Module 8",
+    description:
+      "Modal Verbs for Permission, Obligation, and Advice",
+  },
+  {
+    id: 9,
+    title: "Module 9",
+    description:
+      "Conditional Sentences (Type 0 and Type 1)",
+  },
+  {
+    id: 10,
+    title: "Module 10",
+    description:
+      "Verb patterns: to-infinitive or -ing",
+  },
+  {
+    id: 11,
+    title: "Module 11",
+    description:
+      "some/any/much/many/a lot of",
+  },
+  {
+    id: 12,
+    title: "Module 12",
+    description:
+      "Revision",
   },
 ];
+

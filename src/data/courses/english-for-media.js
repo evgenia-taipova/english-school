@@ -1,13 +1,7 @@
-import ItIcon from "../../assets/forwhom/it.svg";
-import LampIcon from "../../assets/forwhom/lamp.svg";
 import PenIcon from "../../assets/forwhom/pen.svg";
-import PeopleIcon from "../../assets/forwhom/people.svg";
-import SpecIcon from "../../assets/forwhom/spec.svg";
 import StudentIcon from "../../assets/forwhom/student.svg";
-import SystemIcon from "../../assets/forwhom/system.svg";
 import SettingIcon from "../../assets/forwhom/setting.svg";
 import WebIcon from "../../assets/forwhom/web.svg";
-
 
 import ClockIcon from "../../assets/details/clock.svg";
 import GroupIcon from "../../assets/details/group.svg";
@@ -115,4 +109,37 @@ export const topics = [
     id: 5,
     description: "Bias in social media. Reliability of Media.",
   },
+  {
+    id: 6,
+    description: "The Language of Media. Connotation, denotation. Transition",
+  },
+  {
+    id: 7,
+    description: "Identifying a target audience. Advertising in media. ",
+  },
+  {
+    id: 8,
+    description: "Using mass media to support causes. ",
+  },
+  {
+    id: 9,
+    description: "How to write a news report, opinion post on social media.",
+  },
+  {
+    id: 10,
+    description: "How to write an article for a magazine, create a podcast.",
+  },
+  {
+    id: 11,
+    description: "Creating your own content: podcast, interview, article in a newspaper, post on social media, Presentations.",
+  },
+  {
+    id: 12,
+    description: "Creating your own content: podcast, interview, article in a newspaper, post on social media, Presentations.",
+  },
+  {
+    id: 13,
+    description: "Presenting your content",
+  },
+
 ];

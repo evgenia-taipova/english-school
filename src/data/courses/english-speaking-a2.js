@@ -2,7 +2,6 @@ import PeopleIcon from "../../assets/forwhom/people.svg";
 import SpeakIcon from "../../assets/forwhom/speak.svg";
 import PlaneIcon from "../../assets/forwhom/plane.svg";
 
-
 import ClockIcon from "../../assets/details/clock.svg";
 import GroupIcon from "../../assets/details/group.svg";
 import RepeatIcon from "../../assets/details/repeat.svg";
@@ -80,7 +79,6 @@ export const results = [
     title: "Подолання страху",
     text: "Подолаєте страх спілкування англійською мовою.",
   },
- 
 ];
 
 export const programDescription = "12 модулів – 24 заняття по 60 хвилин";
@@ -104,6 +102,34 @@ export const topics = [
   },
   {
     id: 5,
-    description: "Food and Eating Out. National cuisine.Recipes",
+    description: "Food and Eating Out. National Cuisine. Recipes",
+  },
+  {
+    id: 6,
+    description: "Weather and Seasons",
+  },
+  {
+    id: 7,
+    description: "Travel. Getting Around Town",
+  },
+  {
+    id: 8,
+    description: "Shopping and Money",
+  },
+  {
+    id: 9,
+    description: "Health and Fitness. At a Doctor’s. Sport",
+  },
+  {
+    id: 10,
+    description: "Work and Studies",
+  },
+  {
+    id: 11,
+    description: "Shopping and Money",
+  },
+  {
+    id: 12,
+    description: "Entertainment and Media. Books and Movies",
   },
 ];

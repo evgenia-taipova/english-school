@@ -109,4 +109,60 @@ export const topics = [
     description:
       "Business Communication. Business Ethics. Workplace Challenges",
   },
+  {
+    id: 6,
+    description: "Giving Presentations. Meetings and Discussions",
+  },
+  {
+    id: 7,
+    description: "Public Speaking",
+  },
+  {
+    id: 8,
+    description: "Networking",
+  },
+  {
+    id: 9,
+    description: "Conflict Resolution",
+  },
+  {
+    id: 10,
+    description: "Business Trends. Global Business",
+  },
+  {
+    id: 11,
+    description: "The Role of Marketing",
+  },
+  {
+    id: 12,
+    description: "Customer Service",
+  },
+  {
+    id: 13,
+    description: "Starting a Business. Entrepreneurship",
+  },
+  {
+    id: 14,
+    description: "Workplace Technology. Innovation at Work",
+  },
+  {
+    id: 15,
+    description: "Time Management",
+  },
+  {
+    id: 16,
+    description: "Professional Training",
+  },
+  {
+    id: 17,
+    description: "Globalization",
+  },
+  {
+    id: 18,
+    description: "The Role of Social Media in Business",
+  },
+  {
+    id: 19,
+    description: "Corporate Social Responsibility (CSR)",
+  },
 ];

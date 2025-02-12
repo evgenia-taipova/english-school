@@ -79,32 +79,63 @@ export const programDescription = "12 модулів – 24 заняття по 
 export const topics = [
   {
     id: 1,
-    title: "Модуль 1",
-    description:
-      "Present Tenses",
+    title: "Module 1",
+    description: "Present Tenses",
   },
   {
     id: 2,
-    title: "Модуль 2",
-    description:
-      "Past Tenses",
+    title: "Module 2",
+    description: "Past Tenses",
   },
   {
     id: 3,
-    title: "Модуль 3",
-    description:
-      "Future Forms",
+    title: "Module 3",
+    description: "Future Forms",
   },
   {
     id: 4,
-    title: "Модуль 4",
-    description:
-      "What is IT? Jobs in IT. A usual working day at an IT company. Present Simple vs Present Continuous. Prepositions of time",
+    title: "Module 4",
+    description: "Verb patterns",
   },
   {
     id: 5,
-    title: "Модуль 5",
-    description:
-      "What is IT? Jobs in IT. A usual working day at an IT company. Present Simple vs Present Continuous. Prepositions of time",
+    title: "Module 5",
+    description: "Participle vs Gerund",
+  },
+  {
+    id: 6,
+    title: "Module 6",
+    description: "Conditionals. Wishes. Subjunctive Mood",
+  },
+  {
+    id: 7,
+    title: "Module 7",
+    description: "Passive Voice",
+  },
+  {
+    id: 8,
+    title: "Module 8",
+    description: "Reported Speech",
+  },
+  {
+    id: 9,
+    title: "Module 9",
+    description: "Modals for Speculation and Deduction",
+  },
+  {
+    id: 10,
+    title: "Module 10",
+    description: "Relative Clauses",
+  },
+  {
+    id: 11,
+    title: "Module 11",
+    description: "Advanced Structures for Emphasis",
+  },
+  {
+    id: 12,
+    title: "Module 12",
+    description: "Revision",
   },
 ];
+

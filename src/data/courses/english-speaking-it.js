@@ -114,4 +114,64 @@ export const topics = [
     description:
       "Your Favorite Programming Language. Frontend vs. Backend Development",
   },
+  {
+    id: 6,
+    description: "Code Quality and Best Practices",
+  },
+  {
+    id: 7,
+    description: "Open Source Projects",
+  },
+  {
+    id: 8,
+    description: "Agile Development and Scrum",
+  },
+  {
+    id: 9,
+    description: "Cybersecurity in IT. Data Privacy",
+  },
+  {
+    id: 10,
+    description: "Ethical Issues in IT. Hacking and Ethical Hacking",
+  },
+  {
+    id: 11,
+    description: "AI and Ethics",
+  },
+  {
+    id: 12,
+    description: "Favorite Tools for Developers",
+  },
+  {
+    id: 13,
+    description: "Cloud Computing",
+  },
+  {
+    id: 14,
+    description: "DevOps and Automation",
+  },
+  {
+    id: 15,
+    description: "Testing and Debugging",
+  },
+  {
+    id: 16,
+    description: "Artificial Intelligence and Machine Learning",
+  },
+  {
+    id: 17,
+    description: "Blockchain Technology",
+  },
+  {
+    id: 18,
+    description: "Communication in IT. Business Ethics",
+  },
+  {
+    id: 19,
+    description: "Team Collaboration",
+  },
+  {
+    id: 20,
+    description: "The Future of IT. Continuous Learning in IT",
+  },
 ];
