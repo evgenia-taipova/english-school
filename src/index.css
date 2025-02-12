@@ -2851,7 +2851,7 @@ footer span {
 
   .slide {
     padding: 24px 20px;
-    gap: 0px;
+    gap: 16px;
     border-radius: 16px;
     border: 2px solid rgba(69, 44, 145, 0.6);
     /* backdrop-filter: blur(6px); */
