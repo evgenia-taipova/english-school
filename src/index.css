@@ -374,7 +374,7 @@ header {
 .privacy__top-header span {
   color: var(--Text-secondary, #e8e8e9);
   text-align: center;
-  font-family: "DM Sans";
+  font-family: "Nunito Sans", serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -386,7 +386,7 @@ header {
   color: var(--Text-primary, #fff);
 
   /* Title/h4 */
-  font-family: "DM Sans";
+  font-family: "Nunito Sans", serif;
   font-size: 32px;
   font-style: normal;
   font-weight: 700;
