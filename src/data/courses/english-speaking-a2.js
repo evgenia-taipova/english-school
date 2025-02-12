@@ -52,7 +52,7 @@ export const themes = [
   "Weather and Seasons",
   "Travel.Getting Around Town",
   "Shopping and Money",
-  "Shopping and Money",
+  "Entertainment and Media. Books and movies",
 ];
 
 export const benefits = [
@@ -114,22 +114,18 @@ export const topics = [
   },
   {
     id: 8,
-    description: "Shopping and Money",
-  },
-  {
-    id: 9,
     description: "Health and Fitness. At a Doctor’s. Sport",
   },
   {
-    id: 10,
+    id: 9,
     description: "Work and Studies",
   },
   {
-    id: 11,
+    id: 10,
     description: "Shopping and Money",
   },
   {
-    id: 12,
+    id: 11,
     description: "Entertainment and Media. Books and Movies",
   },
 ];

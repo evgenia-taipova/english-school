@@ -51,8 +51,18 @@ export const themes = [
   "Business Communication. Business Ethics. Workplace Challenges",
   "Giving Presentations. Meetings and Discussions",
   "Public Speaking",
-  "Technology and Modern Life. Future Innovations",
-  "Shopping and Money",
+  "Networking",
+  "Conflict Resolution",
+  "Business Trends. Global Business",
+  "The Role of Marketing",
+  "Customer Service",
+  "Starting a Business. Entrepreneurship",
+  "Workplace Technology. Innovation at Work",
+  "Time Management",
+  "Professional Training",
+  "Globalization",
+  "The Role of Social Media in Business",
+  "Corporate Social Responsibility (CSR)",
 ];
 
 export const benefits = [

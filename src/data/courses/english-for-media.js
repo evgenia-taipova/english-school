@@ -49,8 +49,15 @@ export const themes = [
   "Аналіз новин: заголовки, структура новин, вибір слів для впливу на аудиторію.",
   "Традиційні медіа vs соціальні медіа. Порівняння різних газет. Порівняння різних соціальних мереж.",
   "Фейкові новини vs справжні новини. Дезінформація, маніпуляція.",
-  "Фейкові новини vs справжні новини. Дезінформація, маніпуляція.",
-  "Фейкові новини vs справжні новини. Дезінформація, маніпуляція.",
+  "Мова медіа. Коннотація, денотація.",
+  "Упередженість у соціальних мережах. Надійність медіа.",
+  "Соціальні мережі: як правильно споживати контент та уникати інформаційного перевантаження.",
+  "Медіа-грамотність: розуміння ролі медіа у формуванні громадської думки.",
+  "Етика в медіа: об’єктивність, авторське право, конфіденційність.",
+  "Тенденції у сучасних медіа: глобалізація, штучний інтелект у журналістиці, віральний контент.",
+  "Жанри медіа: новини, статті, репортажі, подкасти, відеоконтент.",
+  "Використання масових медіа для підтримки соціальних ініціатив.",
+  "Практичні завдання: створення власного медіа-контенту англійською мовою.",
 ];
 
 export const benefits = [
@@ -131,15 +138,16 @@ export const topics = [
   },
   {
     id: 11,
-    description: "Creating your own content: podcast, interview, article in a newspaper, post on social media, Presentations.",
+    description:
+      "Creating your own content: podcast, interview, article in a newspaper, post on social media, Presentations.",
   },
   {
     id: 12,
-    description: "Creating your own content: podcast, interview, article in a newspaper, post on social media, Presentations.",
+    description:
+      "Creating your own content: podcast, interview, article in a newspaper, post on social media, Presentations.",
   },
   {
     id: 13,
     description: "Presenting your content",
   },
-
 ];

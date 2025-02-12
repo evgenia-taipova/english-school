@@ -57,7 +57,18 @@ export const themes = [
   "Code Quality and Best Practices",
   "Open Source Projects",
   "Agile Development and Scrum",
-  "Shopping and Money",
+  "Cybersecurity in IT. Data Privacy",
+  "Ethical Issues in IT. Hacking and Ethical Hacking",
+  "AI and Ethics",
+  "Favorite Tools for Developers",
+  "Cloud Computing",
+  "DevOps and Automation",
+  "Testing and Debugging",
+  "Artificial Intelligence and Machine Learning",
+  "Blockchain Technology",
+  "Communication in IT. Business Ethics.",
+  "Team Collaboration.",
+  "The Future of IT. Continuous Learning in IT",
 ];
 
 export const benefits = [

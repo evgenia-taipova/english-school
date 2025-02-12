@@ -43,9 +43,9 @@ export const themes = [
   "Passive Voice",
   "Reported Speech",
   "Modals for Speculation and Deduction",
-  "Штучний Інтелект",
-  "Фейкові новини vs справжні новини. Дезінформація, маніпуляція.",
-  "Фейкові новини vs справжні новини. Дезінформація, маніпуляція.",
+  "Relative Clauses",
+  "Advanced Structures for Emphasis",
+  "Revision",
 ];
 
 export const benefits = [
@@ -138,4 +138,3 @@ export const topics = [
     description: "Revision",
   },
 ];
-

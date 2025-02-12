@@ -41,9 +41,11 @@ export const themes = [
   "Adjectives and adverbs. Comparatives and Superlatives",
   "Present Perfect Tense",
   "Present Perfect vs Past Simple",
-  "Штучний Інтелект",
-  "Фейкові новини vs справжні новини. Дезінформація, маніпуляція.",
-  "Фейкові новини vs справжні новини. Дезінформація, маніпуляція.",
+  "Modal Verbs for Permission, Obligation, and Advice",
+  "Conditional Sentences (Type 0 and Type 1)",
+  "Verb patterns to infinitive or ing",
+  "Some/any/much/many/ a lot of",
+  "Revision",
 ];
 
 export const benefits = [
@@ -84,68 +86,56 @@ export const topics = [
   {
     id: 2,
     title: "Module 2",
-    description:
-      "Past Simple Tense. Used to do. Prepositions of time",
+    description: "Past Simple Tense. Used to do. Prepositions of time",
   },
   {
     id: 3,
     title: "Module 3",
-    description:
-      "Past Continuous Tense. Past Continuous vs Past Simple",
+    description: "Past Continuous Tense. Past Continuous vs Past Simple",
   },
   {
     id: 4,
     title: "Module 4",
-    description:
-      "Expressing future",
+    description: "Expressing future",
   },
   {
     id: 5,
     title: "Module 5",
-    description:
-      "Adjectives and adverbs. Comparatives and Superlatives",
+    description: "Adjectives and adverbs. Comparatives and Superlatives",
   },
   {
     id: 6,
     title: "Module 6",
-    description:
-      "Present Perfect Tense",
+    description: "Present Perfect Tense",
   },
   {
     id: 7,
     title: "Module 7",
-    description:
-      "Present Perfect vs Past Simple",
+    description: "Present Perfect vs Past Simple",
   },
   {
     id: 8,
     title: "Module 8",
-    description:
-      "Modal Verbs for Permission, Obligation, and Advice",
+    description: "Modal Verbs for Permission, Obligation, and Advice",
   },
   {
     id: 9,
     title: "Module 9",
-    description:
-      "Conditional Sentences (Type 0 and Type 1)",
+    description: "Conditional Sentences (Type 0 and Type 1)",
   },
   {
     id: 10,
     title: "Module 10",
-    description:
-      "Verb patterns: to-infinitive or -ing",
+    description: "Verb patterns: to-infinitive or -ing",
   },
   {
     id: 11,
     title: "Module 11",
-    description:
-      "some/any/much/many/a lot of",
+    description: "some/any/much/many/a lot of",
   },
   {
     id: 12,
     title: "Module 12",
-    description:
-      "Revision",
+    description: "Revision",
   },
 ];
-

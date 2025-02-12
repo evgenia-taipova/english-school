@@ -52,7 +52,15 @@ export const themes = [
   "Food and Cuisine",
   "Festivals and Traditions. Cultural Differences and Stereotypes",
   "Technology and Modern Life. Future Innovations",
-  "Shopping and Money",
+  "Social Media and Communication",
+  "Artificial Intelligence",
+  "Books, Movies and TV Shows",
+  "Music and Art",
+  "Gaming and Virtual Reality",
+  "The Power of Media",
+  "Climate Change",
+  "Health and Wellness",
+  "Equality and Diversity",
 ];
 
 export const benefits = [
@@ -110,7 +118,8 @@ export const topics = [
   },
   {
     id: 7,
-    description: "Festivals and Traditions. Cultural Differences and Stereotypes",
+    description:
+      "Festivals and Traditions. Cultural Differences and Stereotypes",
   },
   {
     id: 8,
@@ -153,4 +162,3 @@ export const topics = [
     description: "Equality and Diversity",
   },
 ];
-
