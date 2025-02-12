@@ -324,10 +324,15 @@ header {
 
 .language-selector {
   margin-left: auto;
+}
+
+.language-selector__wrapper {
   display: flex;
-  padding: 12px;
   align-items: center;
+  padding: 12px;
   align-self: stretch;
+  position: relative; /* Добавляем позиционирование */
+  cursor: pointer;
 }
 
 .language-selector__custom-select {
@@ -337,17 +342,18 @@ header {
   border: none;
   outline: none;
   color: #999;
-
   font-family: "Montserrat";
   font-size: var(--font-size-16, 16px);
   font-style: normal;
   font-weight: 500;
   line-height: 24px;
+  padding-right: 24px;
 }
 
-.language-selector__custom-select option {
-  background: #1a1a1a;
-  color: white;
+.language-selector__custom-arrow {
+  position: absolute;
+  right: 10px;
+  pointer-events: none;
 }
 
 .privacy__top {
