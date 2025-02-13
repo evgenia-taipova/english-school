@@ -8,7 +8,7 @@ import EuroIcon from "../../assets/details/euro.svg";
 
 export const headerInfo = {
   title: "English Grammar A2",
-  features: ["Початковий рівень", "Граматика", "Подолання мовного бар’єру"],
+  features: [ "Граматика"],
   description:
     "Покращуйте свою граматику англійської мови на рівні A2 завдяки курсу, спрямованому на закріплення основних правил і мовних структур.",
 };

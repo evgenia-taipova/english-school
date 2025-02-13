@@ -10,16 +10,16 @@ import EuroIcon from "../../assets/details/euro.svg";
 
 export const headerInfo = {
   title: "English for Business",
-  features: ["Середній рівень", "Професійна англійська", "Практичні навички"],
+  features: ["Професійна англійська", "Практичні навички"],
   description:
     "Опануйте ділову англійську, щоб впевнено спілкуватися з партнерами, вести переговори та досягати успіху в бізнесі.",
 };
 
 export const details = [
-  { icon: ClockIcon, text: "38 занять по 60 хв., 4 місяця" },
+  { icon: ClockIcon, text: "26 занять по 60 хв., 2,5 місяця" },
   { icon: GroupIcon, text: "6-8 у групі" },
   { icon: RepeatIcon, text: "двічі на тиждень" },
-  { icon: EuroIcon, text: "427€" },
+  { icon: EuroIcon, text: "315€" },
 ];
 
 export const targetGroups = [

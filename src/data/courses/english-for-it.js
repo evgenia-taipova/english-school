@@ -11,7 +11,7 @@ import EuroIcon from "../../assets/details/euro.svg";
 
 export const headerInfo = {
   title: "English for IT",
-  features: ["Середній рівень", "Професійна англійська", "Практичні навички"],
+  features: ["Професійна англійська", "Практичні навички"],
   description:
     "Перетворіть англійську на інструмент для досягнення кар’єрних цілей завдяки онлайн- курсу для IT-спеціалістів.",
 };

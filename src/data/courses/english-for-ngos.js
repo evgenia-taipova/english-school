@@ -10,13 +10,13 @@ import EuroIcon from "../../assets/details/euro.svg";
 
 export const headerInfo = {
   title: "English for NGOs",
-  features: ["Середній рівень", "Професійна англійська", "Практичні навички"],
+  features: [ "Професійна англійська", "Практичні навички"],
   description:
     "Опануйте англійську для ефективної роботи у громадських організаціях, захисту прав людини та підтримки демократії.",
 };
 
 export const details = [
-  { icon: ClockIcon, text: "38 занять по 60 хв., 3 місяця" },
+  { icon: ClockIcon, text: "26 занять по 60 хв., 2,5 місяця" },
   { icon: GroupIcon, text: "6-8 у групі" },
   { icon: RepeatIcon, text: "двічі на тиждень" },
   { icon: EuroIcon, text: "315€" },

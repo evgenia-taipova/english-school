@@ -71,7 +71,7 @@ function HomeTop() {
 
       <CourseSlider title="Спеціалізована англійська" category="specialized" />
       <CourseSlider title="Граматика англійської мови" category="grammar" />
-      <CourseSlider title="English Speaking Club" category="speaking" />
+      <CourseSlider title="English Speaking Clubs" category="speaking" />
 
       <TopBg backgroundUrl={backgroundUrl} top="-135px" />
     </section>

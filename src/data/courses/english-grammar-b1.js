@@ -8,7 +8,7 @@ import EuroIcon from "../../assets/details/euro.svg";
 
 export const headerInfo = {
   title: "English Grammar B1+ Level",
-  features: ["Середній рівень", "Граматика", "Подолання мовного бар’єру"],
+  features: [ "Граматика"],
   description:
     "Поглиблюйте знання граматики на рівні B1+ та вдосконалюйте навички використання англійської мови.",
 };

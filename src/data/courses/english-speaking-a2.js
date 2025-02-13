@@ -10,7 +10,6 @@ import EuroIcon from "../../assets/details/euro.svg";
 export const headerInfo = {
   title: "English Speaking Club (A2 Level)",
   features: [
-    "Початковий рівень",
     "Розмовна практика",
     "Подолання мовного бар’єру",
     "Щотижневі заняття",
