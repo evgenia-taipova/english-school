@@ -13,16 +13,16 @@ function Footer() {
         </a>
         <nav className="footer__main-nav">
           <li className="footer__nav-item">
-            <a href="#courses">Курси</a>
+            <a href="/#courses">Курси</a>
           </li>
           <li className="footer__nav-item">
-            <a href="#lecturers">Лектори</a>
+            <a href="/#lecturers">Лектори</a>
           </li>
           <li className="footer__nav-item">
-            <a href="#about">Про нас</a>
+            <a href="/#about">Про нас</a>
           </li>
           <li className="footer__nav-item">
-            <a href="#contacts">Контакти</a>
+            <a href="/#contacts">Контакти</a>
           </li>
         </nav>
         <div className="footer__main-links">
