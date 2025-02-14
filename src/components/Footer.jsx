@@ -7,7 +7,7 @@ function Footer() {
       <div className="footer__main">
         <a
           className="footer__logo"
-          href="https://novas-cool-site-aba215.webflow.io/"
+          href="/"
         >
           <img className="footer__logo-img" src={logo} alt="" />
         </a>
