@@ -21,6 +21,10 @@ const countries = defaultCountries
 
 const HomeForm = forwardRef(({ courses }, ref) => {
   const [phone, setPhone] = useState("");
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [selectedCourse, setSelectedCourse] = useState("");
+
   return (
     <section ref={ref} className="form" id="contacts">
       <div className="course-form">
@@ -61,11 +65,23 @@ const HomeForm = forwardRef(({ courses }, ref) => {
             </div>
           </div>
         </div>
-        <form action="" method="post">
+        <form
+          action="https://formsubmit.co/taipova.evgenia@gmail.com"
+          method="POST"
+        >
+          <input type="hidden" name="_subject" value="Нова заявка на курс" />
+          <input type="hidden" name="_template" value="table" />
           <div className="form__main">
             <label>
               Ім’я
-              <input className="form__input" name="Name" placeholder="Iван" />
+              <input
+                className="form__input"
+                name="Name"
+                placeholder="Iван"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                required
+              />
             </label>
             <label>
               Номер телефону
@@ -85,7 +101,9 @@ const HomeForm = forwardRef(({ courses }, ref) => {
                   },
                 }}
                 countries={countries}
+                required
               />
+              <input type="hidden" name="Phone" value={phone} />
             </label>
             <label>
               Емейл
@@ -93,13 +111,22 @@ const HomeForm = forwardRef(({ courses }, ref) => {
                 className="form__input"
                 name="Email"
                 placeholder="myemail@gmail.com"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
               />
             </label>
             <label>
               Оберіть потрібний курс
-              <select className="form__input form__input-select" name="course">
+              <select
+                className="form__input form__input-select"
+                name="course"
+                value={selectedCourse}
+                onChange={(e) => setSelectedCourse(e.target.value)}
+                required
+              >
                 {courses.map((course, index) => (
-                  <option key={course.id} value={course.id}>
+                  <option key={course.id} value={course.title}>
                     {`${String(index + 1).padStart(2, "0")} - ${course.title}`}
                   </option>
                 ))}

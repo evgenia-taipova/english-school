@@ -26,15 +26,6 @@ import backgroundUrl from "../assets/pages-bg/english-speaking-a2.png";
 function EnglishSpeakingA2Page() {
   const { formRef } = useScroll();
 
-  const fadeIn = (delay = 0) => ({
-    hidden: { opacity: 0, y: 50 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 1.2, delay }, // Увеличиваем длительность
-    },
-  });
-
   return (
     <main className="page">
       <section className="course__top">
@@ -79,7 +70,7 @@ function EnglishSpeakingA2Page() {
           topics={topics}
           version="v2"
         />
-        <CourseForm ref={formRef} />
+        <CourseForm ref={formRef} courseTitle={headerInfo.title}/>
         <div className="course-results__gradient"></div>
       </section>
     </main>

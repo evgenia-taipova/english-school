@@ -67,7 +67,7 @@ function EnglishForITPage() {
 
       <section className="course-topic-form">
         <CourseProgram description={programDescription} topics={topics} />
-        <CourseForm ref={formRef} />
+        <CourseForm ref={formRef} courseTitle={headerInfo.title}/>
         <div className="course-results__gradient"></div>
       </section>
     </main>

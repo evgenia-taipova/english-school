@@ -68,7 +68,7 @@ function EnglishForBusinessPage() {
           topics={topics}
           version="v2"
         />
-        <CourseForm ref={formRef} />
+        <CourseForm ref={formRef} courseTitle={headerInfo.title} />
         <div className="course-results__gradient"></div>
       </section>
     </main>

@@ -19,8 +19,10 @@ const countries = defaultCountries
   .filter(({ iso2 }) => allowedCountries.includes(iso2))
   .map(buildCountryData);
 
-const CourseForm = forwardRef((props, ref) => {
+const CourseForm = forwardRef(({ courseTitle }, ref) => {
   const [phone, setPhone] = useState("");
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
 
   return (
     <div ref={ref} className="course-form">
@@ -57,12 +59,25 @@ const CourseForm = forwardRef((props, ref) => {
           </div>
         </div>
       </div>
-      <form action="" method="post">
+      <form
+        action="https://formsubmit.co/taipova.evgenia@gmail.com"
+        method="POST"
+      >
+        <input type="hidden" name="_subject" value="Нова заявка на курс" />
+        <input type="hidden" name="_template" value="table" />
+
         <div className="form__main">
           <div></div>
           <label>
             Ім’я
-            <input className="form__input" name="Name" placeholder="Iван" />
+            <input
+              className="form__input"
+              name="Name"
+              placeholder="Iван"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              required
+            />
           </label>
           <label>
             Номер телефону
@@ -80,7 +95,9 @@ const CourseForm = forwardRef((props, ref) => {
                 dropdownStyleProps: { className: "form__input-dropdown" },
               }}
               countries={countries}
+              required
             />
+            <input type="hidden" name="Phone" value={phone} />
           </label>
 
           <label>
@@ -89,8 +106,12 @@ const CourseForm = forwardRef((props, ref) => {
               className="form__input"
               name="Email"
               placeholder="myemail@gmail.com"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
             />
           </label>
+          <input type="hidden" name="course" value={courseTitle} />
         </div>
 
         <button className="form__btn button primary" type="submit">
