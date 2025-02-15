@@ -3,6 +3,7 @@ import Header from "./components/Header";
 import { BrowserRouter as Router } from "react-router-dom";
 import RoutesWithKey from "./components/RoutesWithKey";
 import { ScrollProvider } from "./components/ScrollContext";
+import ScrollToTopButton from "./components/ScrollToTopButton";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         <Header />
         <RoutesWithKey />
         <Footer />
+        <ScrollToTopButton />
       </Router>
     </ScrollProvider>
   );

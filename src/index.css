@@ -2131,6 +2131,32 @@ footer span {
   left: 0;
 }
 
+/* ScrollToTopButton */
+
+.scroll-to-top {
+  position: fixed;
+  right: 24px;
+  bottom: 24.2px;
+
+  display: flex;
+  padding: 12px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+
+  border-radius: 300px;
+  background: #693af6;
+  box-shadow: 0px 0px 13px 0px rgba(151, 117, 255, 0.6);
+
+  color: var(--Button-Primary-layer-default, #fff);
+  text-align: center;
+  /* font-family: "Montserrat"; */
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 26px; /* 108.333% */
+}
+
 @media (max-width: 1740px) {
   .advantages-img__ellipse {
     top: -30%;
@@ -3239,6 +3265,14 @@ footer span {
   }
   .course-scroll__list {
     gap: 24px;
+  }
+
+  .scroll-to-top {
+    padding: 12px;
+  }
+
+  .scroll-to-top span {
+    display: none;
   }
 }
 
