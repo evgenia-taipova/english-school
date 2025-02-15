@@ -60,7 +60,7 @@ const CourseForm = forwardRef(({ courseTitle }, ref) => {
         </div>
       </div>
       <form
-        action="https://formsubmit.co/taipova.evgenia@gmail.com"
+        action="https://formsubmit.co/novaitschooleu@gmail.com"
         method="POST"
       >
         <input type="hidden" name="_subject" value="Нова заявка на курс" />
