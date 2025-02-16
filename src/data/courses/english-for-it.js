@@ -3,7 +3,7 @@ import StudentIcon from "../../assets/forwhom/student.svg";
 import SpecIcon from "../../assets/forwhom/spec.svg";
 import LampIcon from "../../assets/forwhom/lamp.svg";
 
-import CalendarIcon from "../../assets/details/calendar.svg";
+// import CalendarIcon from "../../assets/details/calendar.svg";
 import ClockIcon from "../../assets/details/clock.svg";
 import GroupIcon from "../../assets/details/group.svg";
 import RepeatIcon from "../../assets/details/repeat.svg";
@@ -17,7 +17,7 @@ export const headerInfo = {
 };
 
 export const details = [
-  { icon: CalendarIcon, text: "з 24.02 по 30.04 2025р." },
+  // { icon: CalendarIcon, text: "з 24.02 по 30.04 2025р." },
   { icon: ClockIcon, text: "24 заняття по 60 хв., 2,5 місяця" },
   { icon: GroupIcon, text: "6-8 у групі" },
   { icon: RepeatIcon, text: "двічі на тиждень" },

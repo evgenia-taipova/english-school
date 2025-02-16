@@ -46,20 +46,25 @@ const privacyData = {
           {
             title: "3.1. The performer is committed to:",
             listItems: [
-              "Give Customer access to educational materials and classes according to the chosen course.",
-              "Perform the learning process qualitatively and in a concerted time.",
+              "Provide the Client with access to educational materials and classes according to the selected course.",
+              "Conduct the educational process with quality and within the agreed timeframes.",
+              "Provide consultations regarding the educational process.",
             ],
           },
           {
             title: "3.2. The customer is committed to:",
             listItems: [
-              "To make a timely payment for services.",
-              "Do not transfer access to courses to third parties without written permission of the performer.",
+              "Make timely payments for the Services.",
+              "Complete assignments and adhere to the learning schedule.",
+              "Do not share access to courses with third parties without the Contractor's written consent.",
             ],
           },
           {
             title: "3.3. The Contractor has the right:",
-            listItems: [".", "."],
+            listItems: [
+              " Modify the training program, format, and service delivery conditions with prior notice to the Client.",
+              "Block the Client's access to courses in case of a breach of this Agreement's terms.",
+            ],
           },
           {
             title: "3.4. Customer has the right:",
@@ -96,11 +101,17 @@ const privacyData = {
         subSections: [
           {
             title: "5.1. The performer is not responsible for:",
-            listItems: [".", "."],
+            listItems: [
+              "The Client's learning outcomes, as they depend on their personal efforts and engagement in the process.",
+              "Technical failures of the platform if they occurred through no fault of the Contractor.",
+            ],
           },
           {
             title: "5.2. The customer is responsible for:",
-            listItems: [".", "."],
+            listItems: [
+              "Compliance with the learning rules.",
+              "Use of educational materials for personal purposes only.",
+            ],
           },
         ],
       },
