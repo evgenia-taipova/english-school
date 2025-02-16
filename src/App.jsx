@@ -5,20 +5,21 @@ import RoutesWithKey from "./components/RoutesWithKey";
 import { ScrollProvider } from "./components/ScrollContext";
 import ScrollToTopButton from "./components/ScrollToTopButton";
 import CookieBanner from "./components/CookieBanner";
+import { useState } from "react";
 
 function App() {
+  const [cookieConsent, setCookieConsent] = useState(
+    localStorage.getItem("cookieConsent")
+  );
 
-
-
-  
   return (
     <ScrollProvider>
       <Router>
         <Header />
-        <RoutesWithKey />
+        <RoutesWithKey setCookieConsent={setCookieConsent}/>
         <Footer />
         <ScrollToTopButton />
-        <CookieBanner />
+        {!cookieConsent && <CookieBanner setCookieConsent={setCookieConsent} />}
       </Router>
     </ScrollProvider>
   );

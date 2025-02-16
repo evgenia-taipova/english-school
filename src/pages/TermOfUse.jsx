@@ -29,7 +29,7 @@ const translations = {
   },
 };
 
-function TermOfUse() {
+function TermOfUse({setCookieConsent}) {
   const [language, setLanguage] = useState("en");
 
   useEffect(() => {
@@ -71,15 +71,16 @@ function TermOfUse() {
             <Link to="/" className="button secondary terms">
               {t.buttonToHome}
             </Link>
-            <button
+            <Link
               className="button primary terms"
               onClick={() => {
                 localStorage.setItem("cookieConsent", "true");
-                window.location.reload(); // Перезагрузка страницы для скрытия баннера
+                setCookieConsent("true"); // Скрываем CookieBanner без перезагрузки
               }}
+              to="/"
             >
               {t.buttonAccept}
-            </button>
+            </Link>
           </div>
         </div>
       </section>

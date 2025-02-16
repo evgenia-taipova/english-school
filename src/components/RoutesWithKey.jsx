@@ -15,7 +15,7 @@ import PrivacyPolicy from "../pages/PrivacyPolicy";
 import ScrollToTop from "./ScrollToTop";
 import TermOfUse from "../pages/TermOfUse";
 
-function RoutesWithKey() {
+function RoutesWithKey({ setCookieConsent }) {
   const location = useLocation();
 
   return (
@@ -47,7 +47,10 @@ function RoutesWithKey() {
           element={<EnglishSpeakingB1BusinessPage />}
         />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-        <Route path="/term-of-use" element={<TermOfUse />} />
+        <Route
+          path="/term-of-use"
+          element={<TermOfUse setCookieConsent={setCookieConsent} />}
+        />
       </Routes>
     </>
   );
