@@ -4,8 +4,13 @@ import { BrowserRouter as Router } from "react-router-dom";
 import RoutesWithKey from "./components/RoutesWithKey";
 import { ScrollProvider } from "./components/ScrollContext";
 import ScrollToTopButton from "./components/ScrollToTopButton";
+import CookieBanner from "./components/CookieBanner";
 
 function App() {
+
+
+
+  
   return (
     <ScrollProvider>
       <Router>
@@ -13,6 +18,7 @@ function App() {
         <RoutesWithKey />
         <Footer />
         <ScrollToTopButton />
+        <CookieBanner />
       </Router>
     </ScrollProvider>
   );

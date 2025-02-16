@@ -25,7 +25,16 @@ function Header() {
     <>
       <header>
         <div className="header__main">
-          <Link className="header__logo" to="/">
+          <Link
+            className="header__logo"
+            to="/"
+            onClick={(e) => {
+              if (location.pathname === "/") {
+                e.preventDefault(); // Предотвращаем переход, если уже на главной
+                window.scrollTo({ top: 0, behavior: "smooth" }); // Прокручиваем наверх
+              }
+            }}
+          >
             <img className="header__logo-img" src={logo} alt="" />
           </Link>
 

@@ -5,10 +5,7 @@ function Footer() {
   return (
     <footer>
       <div className="footer__main">
-        <a
-          className="footer__logo"
-          href="/"
-        >
+        <a className="footer__logo" href="/">
           <img className="footer__logo-img" src={logo} alt="" />
         </a>
         <nav className="footer__main-nav">
@@ -27,7 +24,7 @@ function Footer() {
         </nav>
         <div className="footer__main-links">
           <Link to="/privacy-policy">Політика конфіденційності</Link>
-          <a href="">Умови обслуговування</a>
+          <Link to="/term-of-use">Умови обслуговування</Link>
         </div>
       </div>
       <div className="footer_divider"></div>

@@ -1,9 +1,4 @@
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  useLocation,
-} from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import { Home } from "../pages/Home";
 import EnglishForITPage from "../pages/EnglishForITPage";
 import EnglishForMediaPage from "../pages/EnglishForMediaPage";
@@ -18,6 +13,7 @@ import EnglishSpeakingB1Page from "../pages/EnglishSpeakingB1Page";
 import EnglishSpeakingB1BusinessPage from "../pages/EnglishSpeakingB1Business";
 import PrivacyPolicy from "../pages/PrivacyPolicy";
 import ScrollToTop from "./ScrollToTop";
+import TermOfUse from "../pages/TermOfUse";
 
 function RoutesWithKey() {
   const location = useLocation();
@@ -51,6 +47,7 @@ function RoutesWithKey() {
           element={<EnglishSpeakingB1BusinessPage />}
         />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/term-of-use" element={<TermOfUse />} />
       </Routes>
     </>
   );
