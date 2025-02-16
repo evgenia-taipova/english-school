@@ -94,7 +94,7 @@ const HomeForm = forwardRef(({ courses }, ref) => {
               <img src={QRIcon} alt="" />
               <div className="course-links__icons">
                 <a
-                  href="https://t.me/CareerEnglishHub"
+                  href="https://t.me/Nova_Online_School"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -204,7 +204,7 @@ const HomeForm = forwardRef(({ courses }, ref) => {
           <p>Або зв’яжіться з нами через мессенджери:</p>
           <div className="course-links__icons__mobile">
             <a
-              href="https://t.me/CareerEnglishHub"
+              href="https://t.me/Nova_Online_School"
               target="_blank"
               rel="noopener noreferrer"
             >
