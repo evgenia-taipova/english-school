@@ -75,7 +75,7 @@ function TermOfUse({setCookieConsent}) {
               className="button primary terms"
               onClick={() => {
                 localStorage.setItem("cookieConsent", "true");
-                setCookieConsent("true"); // Скрываем CookieBanner без перезагрузки
+                setCookieConsent("true"); 
               }}
               to="/"
             >

@@ -24,6 +24,48 @@ const CourseForm = forwardRef(({ courseTitle }, ref) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
 
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    setLoading(true);
+    setError("");
+
+    const formData = new FormData();
+    formData.append("_subject", "Нова заявка на курс");
+    formData.append("_template", "table");
+    formData.append("_captcha", "false");
+
+    formData.append("Name", name);
+    formData.append("Phone", phone);
+    formData.append("Email", email);
+    formData.append("Course", courseTitle);
+
+    try {
+      const response = await fetch(
+        "https://formsubmit.co/novaitschooleu@gmail.com",
+        {
+          method: "POST",
+          body: formData,
+        }
+      );
+
+      if (response.ok) {
+        setIsSubmitted(true);
+        setName("");
+        setPhone("");
+        setEmail("");
+      } else {
+        setError("Помилка під час відправки. Спробуйте ще раз.");
+      }
+    } catch (err) {
+      setError("Сталася помилка при відправці форми.");
+    }
+    setLoading(false);
+  };
+
   return (
     <div ref={ref} className="course-form">
       <div className="course-form__main">
@@ -59,13 +101,7 @@ const CourseForm = forwardRef(({ courseTitle }, ref) => {
           </div>
         </div>
       </div>
-      <form
-        action="https://formsubmit.co/novaitschooleu@gmail.com"
-        method="POST"
-      >
-        <input type="hidden" name="_subject" value="Нова заявка на курс" />
-        <input type="hidden" name="_template" value="table" />
-
+      <form onSubmit={handleSubmit}>
         <div className="form__main">
           <div></div>
           <label>
@@ -111,13 +147,33 @@ const CourseForm = forwardRef(({ courseTitle }, ref) => {
               required
             />
           </label>
-          <input type="hidden" name="course" value={courseTitle} />
         </div>
 
         <button className="form__btn button primary" type="submit">
           Надіслати
         </button>
       </form>
+
+      {(loading || isSubmitted) && (
+        <div className="modal">
+          <div className="modal-content">
+            {loading ? (
+              <p>Відправляємо...</p>
+            ) : (
+              <>
+                <p>Дякуємо! Ваша заявка успішно відправлена.</p>
+                <button
+                  onClick={() => setIsSubmitted(false)}
+                  className="button primary"
+                >
+                  Закрити
+                </button>
+              </>
+            )}
+          </div>
+        </div>
+      )}
+
       <div className="form-desc__mobile">
         <p>Або зв’яжіться з нами через мессенджери:</p>
         <div className="course-links__icons__mobile">

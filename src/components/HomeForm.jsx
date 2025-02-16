@@ -23,7 +23,54 @@ const HomeForm = forwardRef(({ courses }, ref) => {
   const [phone, setPhone] = useState("");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [selectedCourse, setSelectedCourse] = useState("");
+  const [selectedCourse, setSelectedCourse] = useState(courses[0].title);
+  console.log(courses[0].title);
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    setLoading(true);
+    setError("");
+
+    // Если курс не выбран, установить первый курс
+    const selected =
+      selectedCourse || (courses.length > 0 ? courses[0].title : "");
+
+    const formData = new FormData();
+    formData.append("_subject", "Нова заявка на курс");
+    formData.append("_template", "table");
+    formData.append("_captcha", "false");
+    formData.append("Name", name);
+    formData.append("Phone", phone);
+    formData.append("Email", email);
+    formData.append("Course", selected);
+
+    try {
+      const response = await fetch(
+        "https://formsubmit.co/novaitschooleu@gmail.com",
+        {
+          method: "POST",
+          body: formData,
+        }
+      );
+
+      if (response.ok) {
+        setIsSubmitted(true);
+        setName("");
+        setPhone("");
+        setEmail("");
+        setSelectedCourse(courses.length > 0 ? courses[0].title : "");
+        a;
+      } else {
+        setError("Помилка під час відправки. Спробуйте ще раз.");
+      }
+    } catch (err) {
+      setError("Сталася помилка при відправці форми.");
+    }
+    setLoading(false);
+  };
 
   return (
     <section ref={ref} className="form" id="contacts">
@@ -65,12 +112,7 @@ const HomeForm = forwardRef(({ courses }, ref) => {
             </div>
           </div>
         </div>
-        <form
-          action="https://formsubmit.co/novaitschooleu@gmail.com"
-          method="POST"
-        >
-          <input type="hidden" name="_subject" value="Нова заявка на курс" />
-          <input type="hidden" name="_template" value="table" />
+        <form onSubmit={handleSubmit}>
           <div className="form__main">
             <label>
               Ім’я
@@ -120,7 +162,7 @@ const HomeForm = forwardRef(({ courses }, ref) => {
               Оберіть потрібний курс
               <select
                 className="form__input form__input-select"
-                name="course"
+                name="Сourse"
                 value={selectedCourse}
                 onChange={(e) => setSelectedCourse(e.target.value)}
                 required
@@ -138,6 +180,27 @@ const HomeForm = forwardRef(({ courses }, ref) => {
             Надіслати
           </button>
         </form>
+
+        {(loading || isSubmitted) && (
+          <div className="modal">
+            <div className="modal-content">
+              {loading ? (
+                <p>Відправляємо...</p>
+              ) : (
+                <>
+                  <p>Дякуємо! Ваша заявка успішно відправлена.</p>
+                  <button
+                    onClick={() => setIsSubmitted(false)}
+                    className="button primary"
+                  >
+                    Закрити
+                  </button>
+                </>
+              )}
+            </div>
+          </div>
+        )}
+
         <div className="form-desc__mobile">
           <p>Або зв’яжіться з нами через мессенджери:</p>
           <div className="course-links__icons__mobile">
