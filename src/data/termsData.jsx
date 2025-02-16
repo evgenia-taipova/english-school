@@ -1,4 +1,156 @@
 const privacyData = {
+  en: [
+    {
+      title: "1. General provisions",
+      content: {
+        subSections: [
+          {
+            title:
+              "1.1. The Contractor provides educational services in the field of English in accordance with the Customer chosen by the customer or training program.",
+          },
+          {
+            title: `1.2. This Agreement is public and positioned on the performer's website: <a href="/" className="privacy-link">
+              https://english-school-theta.vercel.app/
+            </a>`,
+          },
+          {
+            title:
+              "1.3. Acceptance of the terms of this Agreement is carried out by payment of services, registration on the platform or signing a separate document between the parties.",
+          },
+        ],
+      },
+    },
+    {
+      title: "2. The subject of the contract",
+      content: {
+        subSections: [
+          {
+            title:
+              "2.1. The contractor provides the customer with English language training in online format and or in video recording.",
+          },
+          {
+            title:
+              "2.2. Services include access to educational materials (text and video), online lessons, personal and group consultations with teachers and other additional resources according to the selected package.",
+          },
+          {
+            title:
+              "2.3. The duration and content of the courses are determined according to the program published on the performer website.",
+          },
+        ],
+      },
+    },
+    {
+      title: "3. The rights and obligations of the parties",
+      content: {
+        subSections: [
+          {
+            title: "3.1. The performer is committed to:",
+            listItems: [
+              "Give Customer access to educational materials and classes according to the chosen course.",
+              "Perform the learning process qualitatively and in a concerted time.",
+            ],
+          },
+          {
+            title: "3.2. The customer is committed to:",
+            listItems: [
+              "To make a timely payment for services.",
+              "Do not transfer access to courses to third parties without written permission of the performer.",
+            ],
+          },
+          {
+            title: "3.3. The Contractor has the right:",
+            listItems: [".", "."],
+          },
+          {
+            title: "3.4. Customer has the right:",
+            listItems: [
+              "Receive Services under the terms of this Agreement.",
+              "Refuse the Services by notifying the Contractor at least 7 calendar days before the date of termination.",
+            ],
+          },
+        ],
+      },
+    },
+    {
+      title: "4. The cost of services and the order of payment",
+      content: {
+        subSections: [
+          {
+            title:
+              "4.1. The cost of services is indicated on the contractor's website and may vary depending on the package selected.",
+          },
+          {
+            title:
+              "4.2. Payment is made using electronic payment systems or bank transfer.",
+          },
+          {
+            title:
+              "4.3. In case of refusal of the customer from the services after the start of study, the refund is not envisaged, except in cases stipulated by the current legislation.",
+          },
+        ],
+      },
+    },
+    {
+      title: "5. The responsibility of the parties",
+      content: {
+        subSections: [
+          {
+            title: "5.1. The performer is not responsible for:",
+            listItems: [".", "."],
+          },
+          {
+            title: "5.2. The customer is responsible for:",
+            listItems: [".", "."],
+          },
+        ],
+      },
+    },
+    {
+      title: "6. The order of resolution of disputes",
+      content: {
+        subSections: [
+          {
+            title:
+              "6.1. All disputes and differences that may arise in connection with this Agreement are resolved by negotiating between parties.",
+          },
+          {
+            title:
+              "6.2. If you cannot reach consent, the dispute is subject to court in accordance with the current legislation.",
+          },
+        ],
+      },
+    },
+    {
+      title: "7. Final positions",
+      content: {
+        subSections: [
+          {
+            title:
+              "7.1. The Contractor has the right to change the terms of this Agreement by publishing appropriate updates on the website.",
+          },
+          {
+            title:
+              "7.2. All issues not regulated by this Agreement are governed by applicable law.",
+          },
+          {
+            title:
+              "7.3. The contract enters into force from the moment of acceptance of its terms by the customer and acts until the completion of the provision of services.",
+          },
+        ],
+      },
+    },
+    {
+      title: "8 . Contact information",
+
+      content: {
+        subSections: [
+          {
+            title: `For requests or questions related to this Agreement, please contact: <a href="mailto:novaitschooleu@gmail.com" className="privacy-link">novaitschooleu@gmail.com</a>`,
+          },
+        ],
+      },
+    },
+  ],
   ua: [
     {
       title: "1. ЗАГАЛЬНІ ПОЛОЖЕННЯ",
@@ -9,8 +161,9 @@ const privacyData = {
               "1.1. Виконавець надає освітні послуги у сфері вивчення англійської мови відповідно до обраного Замовником курсу або програми навчання.",
           },
           {
-            title:
-              "1.2. Цей Договір є публічним і розміщений у вільному доступі на веб-сайті Виконавця: https://english-school-theta.vercel.app/.",
+            title: `1.2. Цей Договір є публічним і розміщений у вільному доступі на веб-сайті Виконавця: <a href="/" className="privacy-link">
+              https://english-school-theta.vercel.app/
+            </a>`,
           },
           {
             title:
@@ -155,7 +308,7 @@ const privacyData = {
       content: {
         subSections: [
           {
-            title: `Для запитів або питань, пов'язаних з цією Угодою, звертайтеся до: novaitschooleu@gmail.com`,
+            title: `Для запитів або питань, пов'язаних з цією Угодою, звертайтеся до: <a href="mailto:novaitschooleu@gmail.com" className="privacy-link">novaitschooleu@gmail.com</a>`,
           },
         ],
       },

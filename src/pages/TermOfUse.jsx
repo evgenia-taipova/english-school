@@ -5,14 +5,15 @@ import TermsList from "../components/TermsList";
 
 const translations = {
   en: {
-    effectiveDate: "Effective Date: 12/30/2024",
-    welcome: "Welcome to Nova School!",
-    privacyIntro: `Your privacy is important to us. This Privacy Policy explains how we collect, use, and protect your personal data when you use our website, `,
+    effectiveDate: "Date of entry into force: 12/30/2024",
+    welcome: "Public Services Agreement",
+    privacyIntro: `This Agreement defines the conditions for providing educational services in the field of English language learning (hereinafter referred to as "Services") provided by the online school of English "Nova School" (hereinafter referred to as "Contractor"), individuals and legal entities (hereinafter-"Customer")`,
     footerText: [
-      "We are committed to resolving your concerns and ensuring the protection of your data.",
-      "By using our website, you acknowledge that you have read and understood this Privacy Policy.",
-      "Thank you for trusting NovaSchool!",
+      "By accepting this agreement, you confirm that you have read, understand and agree to its terms.",
+      "Thank you that you have chosen Nova Shool for your English learning needs for your career!",
     ],
+    buttonToHome: "Return to the Home Page",
+    buttonAccept: "Accept the terms & conditions",
   },
   ua: {
     effectiveDate: "Дата набуття чинності: 30.12.2024",

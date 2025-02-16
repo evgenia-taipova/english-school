@@ -13,7 +13,7 @@ function TermsItem({ title, content }) {
       <div className="terms__content">
         {content?.subSections?.map((sub, index) => (
           <div key={index} className="terms__subsection">
-            <p className="privacy__top-text">{sub.title}</p>
+            <p className="privacy__top-text">{parse(sub.title)}</p>
 
             {sub.listItems && sub.listItems.length > 0 && (
               <ul className="privacy__content-list">
