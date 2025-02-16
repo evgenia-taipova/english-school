@@ -24,7 +24,6 @@ const HomeForm = forwardRef(({ courses }, ref) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [selectedCourse, setSelectedCourse] = useState(courses[0].title);
-  console.log(courses[0].title);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
